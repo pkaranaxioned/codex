@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_checklist_checklist_list_s",
+  "info": {
+    "displayName": "Checklist (List)",
+    "icon": "clipboard-list"
+  },
+  "options": {},
+  "attributes": {
+    "ChecklistItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "checklist.checklist"
+    }
+  }
+}

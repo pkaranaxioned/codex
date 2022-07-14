@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_checklist_checklists",
+  "info": {
+    "displayName": "Checklist (Items)",
+    "icon": "check-circle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ChecklistItem": {
+      "type": "string",
+      "required": true
+    },
+    "ChecklistDescription": {
+      "type": "richtext"
+    }
+  }
+}
