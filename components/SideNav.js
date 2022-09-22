@@ -124,10 +124,10 @@ const SideNav = () => {
         </li>
       </ul>
       <div className="w-full bg-gray-200">
-        <h1 className="text-center pt-3 pb-3 font-bold text-xs">Inbox</h1>
+        <h1 className="text-center pt-3 pb-3 font-bold text-lg">Inbox</h1>
         <ul className="flex flex-col">
-          <li className="flex justify-between p-4">
-            <a className="text-blue-800 w-full flex justify-between">
+          <li className="flex justify-between p-4 bg-gray-500 text-white border-l-4 border-stone-800">
+            <a className="w-full flex justify-between">
               <h4>You</h4>
               <span>5</span>
             </a>
