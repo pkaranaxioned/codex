@@ -1,7 +1,7 @@
 const SideNav = () => {
   return (
     <div className="w-1/5 h-screen flex">
-      <ul className="flex flex-col justify-between p-3 bg-gray-100">
+      <ul className="flex flex-col justify-between p-3 bg-gray-200">
         <li>
           <ul>
             <li className="pt-3 pb-3">
@@ -123,7 +123,7 @@ const SideNav = () => {
           </ul>
         </li>
       </ul>
-      <div className="w-full bg-gray-200">
+      <div className="w-full bg-gray-100">
         <h1 className="text-center pt-3 pb-3 font-bold text-lg">Inbox</h1>
         <ul className="flex flex-col">
           <li className="flex justify-between p-4 bg-gray-500 text-white border-l-4 border-stone-800">
