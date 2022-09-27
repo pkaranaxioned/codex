@@ -2,14 +2,14 @@ const SideNav = () => {
   return (
     <div className="w-auto h-screen">
       <h1 className="text-center p-2 font-bold text-lg">Inbox</h1>
-      <ul className="bg-gray-200">
-        <li className="p-2 flex bg-gray-500 text-white border-l-4 border-stone-800 justify-center md:justify-start">
+      <ul className="bg-gray-200 h-screen">
+        <li className="p-2 flex bg-gray-500 text-white md:border-l-4 md:border-stone-800 justify-center md:justify-start rounded-3xl md:rounded-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
-            stroke="black"
+            stroke="white"
             className="w-6 h-6 md:mr-3"
           >
             <path
@@ -20,7 +20,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">You</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +37,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">Mentions</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -54,7 +54,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">Assigned</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -71,7 +71,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">Unassigned</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -88,7 +88,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">Groups</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -105,7 +105,7 @@ const SideNav = () => {
           </svg>
           <h3 className="md:block hidden">Blog</h3>
         </li>
-        <li className="p-2 flex justify-center md:justify-start">
+        <li className="p-2 flex justify-center md:justify-start border-b-2 border-gray-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

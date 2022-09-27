@@ -90,7 +90,7 @@ const PrimaryNav = () => {
     },
   ];
   return (
-    <div className="w-1/4 bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col">
+    <div className="w-1/4 bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col max-w-xl">
       <div className="flex justify-between p-4">
         <div className="text-blue-800 w-full flex justify-between flex-none">
           <svg
