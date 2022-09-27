@@ -112,7 +112,7 @@ const PrimaryNav = () => {
         </div>
       </div>
       <ul className="flex flex-col flex-auto overflow-y-auto">
-        <li className="block p-4 bg-gray-500 text-white border-l-4 border-stone-800">
+        <li className="block p-4 bg-gray-100 text-black border-stone-200 rounded-2xl">
           <a className="flex justify-between">
             <h4>Nick</h4>
             <span>2m</span>
