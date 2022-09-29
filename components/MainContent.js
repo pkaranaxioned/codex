@@ -58,6 +58,9 @@ const MainContent = () => {
               </li>
             </ul>
           </div>
+          <div className="overflow-y-auto overflow-x-hidden">
+            <h3>Main texts</h3>
+          </div>
         </div>
       </div>
     </>
