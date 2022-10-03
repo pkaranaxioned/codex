@@ -1,8 +1,7 @@
 const SideNav = () => {
   return (
     <div className="w-auto h-screen">
-      <h1 className="text-center p-2 font-bold text-lg">Inbox</h1>
-      <ul className="bg-gray-200">
+      <ul className="bg-gray-200 pt-4">
         <li className="p-2 flex bg-gray-500 text-white md:border-l-4 md:border-stone-800 justify-center lg:justify-start rounded-3xl md:rounded-none">
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -90,25 +90,24 @@ const PrimaryNav = () => {
     },
   ];
   return (
-    <div className="w-1/4 bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col max-w-xl">
+    <div className="bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-full min-w-[10rem]">
       <div className="flex justify-between p-4">
         <div className="text-blue-800 w-full flex justify-between flex-none">
+          <h4 className="font-bold text-lg">Codex</h4>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
-            stroke="black"
+            stroke="currentColor"
             className="w-6 h-6"
           >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+              d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
             />
           </svg>
-
-          <h4 className="font-bold text-lg">You</h4>
         </div>
       </div>
       <ul className="flex flex-col flex-auto overflow-y-auto">
