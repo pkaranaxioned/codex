@@ -11,7 +11,7 @@ const MainContent = () => {
         <div
           className={
             isMainOpen
-              ? "pt-3 pb-3 w-full absolute z-10 bg-slate-600 h-full inset-y-0 left-0 transform transition duration-100 ease-in-out"
+              ? "pt-3 pb-3 w-full absolute z-10 bg-slate-600 h-full inset-y-0 left-0 transform translate-x-0 transition duration-200 ease-in-out"
               : "pt-3 pb-3 w-12 md:flex-auto"
           }
         >
