@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PrimaryNav from "./PrimaryNav";
+import SideNav from "./SideNav";
 
 const MainContent = () => {
   const [isMainOpen, setIsMainOpen] = useState(false);
@@ -7,12 +8,13 @@ const MainContent = () => {
   return (
     <>
       <div className="bg-gray-400 flex-auto flex text-center bg-white rounded-tl-xl border-l shadow-xl relative">
-        <PrimaryNav />
+        <SideNav isMainOpen={isMainOpen} />
+        <PrimaryNav isMainOpen={isMainOpen} />
         <div
           className={
             isMainOpen
-              ? "pt-3 pb-3 w-full absolute z-10 bg-slate-600 h-full inset-y-0 left-0 transform translate-x-0 transition duration-200 ease-in-out"
-              : "pt-3 pb-3 w-12 md:flex-auto"
+              ? "w-full absolute z-10 h-full inset-y-0 left-0 transform translate-x-0 transition duration-200 ease-in-out"
+              : "w-12 md:flex-auto"
           }
         >
           <div className="flex flex-auto justify-between h-12 items-center pl-3 pr-3 border-b-2 border-b-slate-500">
@@ -34,7 +36,7 @@ const MainContent = () => {
             </div>
           </div>
           <div className="overflow-y-auto overflow-x-hidden">
-            <h3 className="hidden md:block">Main content</h3>
+            <h3>Main content</h3>
           </div>
         </div>
       </div>

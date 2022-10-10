@@ -1,6 +1,12 @@
-const SideNav = () => {
+const SideNav = ({ isMainOpen }) => {
   return (
-    <div className="w-auto h-screen overflow-y-auto overflow-x-hidden">
+    <div
+      className={
+        isMainOpen
+          ? "hidden"
+          : "w-auto min-w-[5rem] h-screen overflow-y-auto overflow-x-hidden"
+      }
+    >
       <ul className="bg-gray-200 pt-4">
         <li className="p-2 flex bg-gray-500 text-white md:border-l-4 md:border-stone-800 justify-center flex-col items-center">
           <svg

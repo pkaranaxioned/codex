@@ -1,4 +1,4 @@
-const PrimaryNav = () => {
+const PrimaryNav = ({ isMainOpen }) => {
   const data = [
     {
       name: "Fu Lan",
@@ -89,8 +89,15 @@ const PrimaryNav = () => {
       day: "2d",
     },
   ];
+
   return (
-    <div className="bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-full min-w-[10rem]">
+    <div
+      className={
+        isMainOpen
+          ? "hidden"
+          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-full min-w-[12rem]"
+      }
+    >
       <div className="flex justify-between p-4">
         <div className="text-blue-800 w-full flex justify-between flex-none">
           <h4 className="font-bold text-lg">Codex</h4>

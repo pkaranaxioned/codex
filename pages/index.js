@@ -5,8 +5,7 @@ import SideNav from "../components/SideNav";
 export default function Home() {
   return (
     <Layout title="Codex">
-      <main className="bg-slate-100 flex">
-        <SideNav />
+      <main className="bg-slate-100">
         <MainContent />
       </main>
 
