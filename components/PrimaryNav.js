@@ -1,4 +1,4 @@
-const PrimaryNav = ({ isMainOpen }) => {
+const PrimaryNav = ({ isMainOpen, width }) => {
   const data = [
     {
       name: "Fu Lan",
@@ -94,8 +94,10 @@ const PrimaryNav = ({ isMainOpen }) => {
     <div
       className={
         isMainOpen
+          ? "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem]"
+          : !isMainOpen && width <= 768
           ? "hidden"
-          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-full min-w-[12rem]"
+          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem]"
       }
     >
       <div className="flex justify-between p-4">

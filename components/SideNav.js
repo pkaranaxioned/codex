@@ -1,8 +1,10 @@
-const SideNav = ({ isMainOpen }) => {
+const SideNav = ({ isMainOpen, width }) => {
   return (
     <div
       className={
         isMainOpen
+          ? "w-auto min-w-[5rem] h-screen overflow-y-auto overflow-x-hidden"
+          : !isMainOpen && width <= 768
           ? "hidden"
           : "w-auto min-w-[5rem] h-screen overflow-y-auto overflow-x-hidden"
       }
