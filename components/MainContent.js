@@ -24,8 +24,8 @@ const MainContent = () => {
             !isMainOpen && width >= 768
               ? "w-full md:flex-auto h-screen"
               : isMainOpen && width <= 768
-              ? "w-12"
-              : "w-full absolute z-10 h-screen inset-y-0 right-0 transform translate-x-0 transition-all duration-300 ease-in-out"
+              ? "w-12 inset-y-0 right-0 transform translate-x-0 transition-all duration-500 ease-out"
+              : "w-full absolute z-10 h-screen inset-y-0 right-0 transform translate-x-0 transition-all duration-500 ease-in"
           }
         >
           <div className="flex flex-auto justify-between h-12 items-center pl-3 pr-3 border-b-2 border-b-slate-500">
