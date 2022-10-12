@@ -7,11 +7,9 @@ const MainContent = () => {
   const [width, setWidth] = useState("");
 
   useEffect(() => {
-    if (window.innerWidth <= 768) {
+    window.addEventListener("resize", function () {
       setWidth(window.innerWidth);
-    } else if (window.innerWidth >= 768) {
-      setWidth(window.innerWidth);
-    }
+    });
   }, [width]);
 
   return (
