@@ -1,92 +1,92 @@
 const PrimaryNav = ({ isMainOpen, width }) => {
   const data = [
     {
-      name: "Fu Lan",
-      day: "5d",
+      name: "Content List",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "Array List",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "JavaScript",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "1m",
+      name: "React JS",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "5d",
+      name: "Next JS",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "WordPress",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "Gatsby",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "1m",
+      name: "Markdown",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "5d",
+      name: "Vue JS",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "PHP",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "HTML",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "1m",
+      name: "CSS",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "5d",
+      name: "3D",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "Redux",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "Javascript",
+      title: "...",
     },
     {
-      name: "Fu Lan",
-      day: "1m",
+      name: "Web",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "JamStack",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "Adobe",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "Tailwind",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "React Native",
+      title: "...",
     },
     {
-      name: "Nicole",
-      day: "2m",
+      name: "Snippet",
+      title: "...",
     },
     {
-      name: "Blake",
-      day: "2d",
+      name: "Code",
+      title: "...",
     },
   ];
 
@@ -94,13 +94,13 @@ const PrimaryNav = ({ isMainOpen, width }) => {
     <div
       className={
         isMainOpen
-          ? "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem]"
+          ? "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem] md:shrink-0"
           : !isMainOpen && width <= 768
           ? "hidden"
-          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem]"
+          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem] md:shrink-0"
       }
     >
-      <div className="flex justify-between p-4">
+      <div className="flex justify-between p-[13px] border-b-2 border-b-slate-500">
         <div className="text-blue-800 w-full flex justify-between flex-none">
           <h4 className="font-bold text-lg">Codex</h4>
           <svg
@@ -120,18 +120,14 @@ const PrimaryNav = ({ isMainOpen, width }) => {
         </div>
       </div>
       <ul className="flex flex-col flex-auto overflow-y-auto">
-        <li className="block p-4 bg-gray-100 text-black border-stone-200 rounded-2xl">
-          <a className="flex justify-between">
-            <h4>Nick</h4>
-            <span>2m</span>
-          </a>
-        </li>
         {data.map((item, i) => {
           return (
             <li key={i} className="block p-4 border-b-2">
               <a className="flex justify-between">
-                <h4>{item.name}</h4>
-                <span>{item.day}</span>
+                <h4 className="overflow-hidden text-ellipsis max-w-[5rem] break-normal">
+                  {item.name}
+                </h4>
+                <span>{item.title}</span>
               </a>
             </li>
           );
