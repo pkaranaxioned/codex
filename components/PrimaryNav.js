@@ -1,4 +1,4 @@
-const PrimaryNav = ({ isMainOpen, width }) => {
+const PrimaryNav = ({ isMainOpen }) => {
   const data = [
     {
       name: "Content List",
@@ -92,13 +92,9 @@ const PrimaryNav = ({ isMainOpen, width }) => {
 
   return (
     <div
-      className={
-        isMainOpen
-          ? "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem] md:shrink-0"
-          : !isMainOpen && width <= 768
-          ? "hidden"
-          : "bg-white overflow-y-auto overflow-x-hidden h-screen flex flex-col md:w-72 w-[82%] min-w-[12rem] md:shrink-0"
-      }
+      className={`bg-white flex flex-col md:w-72 w-[83%] md:block h-screen ${
+        isMainOpen ? "block" : "min-w-[12rem] hidden"
+      } md:shrink-0`}
     >
       <div className="flex justify-between p-[13px] border-b-2 border-b-slate-500">
         <div className="text-blue-800 w-full flex justify-between flex-none">
@@ -119,12 +115,15 @@ const PrimaryNav = ({ isMainOpen, width }) => {
           </svg>
         </div>
       </div>
-      <ul className="flex flex-col flex-auto overflow-y-auto">
+      <ul className="flex flex-col overflow-y-auto overflow-x-hidden h-screen">
         {data.map((item, i) => {
           return (
             <li key={i} className="block p-4 border-b-2">
               <a className="flex justify-between">
-                <h4 className="overflow-hidden text-ellipsis max-w-[5rem] break-normal">
+                <h4
+                  className="whitespace-nowrap overflow-hidden text-ellipsis max-w-[8rem] break-normal"
+                  title={item.name}
+                >
                   {item.name}
                 </h4>
                 <span>{item.title}</span>

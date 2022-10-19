@@ -1,121 +1,64 @@
-const SideNav = ({ isMainOpen, width }) => {
+import React from "react";
+import {
+  Icon1,
+  Icon2,
+  Icon3,
+  Icon4,
+  Icon5,
+  Icon6,
+} from "../assets/icons/Icon1";
+
+const SideNav = ({ isMainOpen }) => {
+  const sideNavData = [
+    {
+      icon: <Icon1 />,
+      text: "You",
+    },
+    {
+      icon: <Icon2 />,
+      text: "Snippet",
+    },
+    {
+      icon: <Icon3 />,
+      text: "Code",
+    },
+    {
+      icon: <Icon4 />,
+      text: "Blog",
+    },
+    {
+      icon: <Icon5 />,
+      text: "Profile",
+    },
+    {
+      icon: <Icon6 />,
+      text: "All",
+    },
+  ];
+
   return (
     <div
-      className={
-        isMainOpen
-          ? "w-auto min-w-[5rem] h-screen overflow-y-auto overflow-x-hidden md:shrink-0"
-          : !isMainOpen && width <= 768
-          ? "hidden"
-          : "w-auto min-w-[5rem] h-screen overflow-y-auto overflow-x-hidden md:shrink-0"
-      }
+      className={`${
+        isMainOpen ? "block" : "min-w-[5rem] hidden"
+      } md:block w-auto md:shrink-0`}
     >
-      <ul className="bg-gray-200">
-        <li className="p-2 flex bg-gray-500 text-white md:border-l-4 md:border-stone-800 justify-center flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="white"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">You</h3>
-        </li>
-        <li className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="black"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">
-            Snippet
-          </h3>
-        </li>
-        <li className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="black"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">Code</h3>
-        </li>
-        <li className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="black"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">Blog</h3>
-        </li>
-        <li className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="black"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">
-            Profile
-          </h3>
-        </li>
-        <li className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="black"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
-            />
-          </svg>
-          <h3 className="overflow-hidden text-ellipsis max-w-[4rem]">All</h3>
-        </li>
+      <h3 className="font-bold text-lg p-[13px] border-b-2 border-b-slate-500">
+        Items
+      </h3>
+      <ul className="bg-gray-200 overflow-y-auto overflow-x-hidden h-screen">
+        {sideNavData.map((item, i) => {
+          return (
+            <li
+              className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center"
+              key={i}
+            >
+              <span>{item.icon}</span>
+              <h3 className="overflow-hidden text-ellipsis max-w-[4rem] px-2 sm:px-0">
+                {item.text}
+              </h3>
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

@@ -4,29 +4,18 @@ import SideNav from "./SideNav";
 
 const MainContent = () => {
   const [isMainOpen, setIsMainOpen] = useState(false);
-  const [width, setWidth] = useState("");
-
-  useEffect(() => {
-    window.addEventListener("resize", function () {
-      setWidth(window.innerWidth);
-    });
-  }, [width]);
 
   return (
     <>
-      <div className="bg-gray-400 flex-auto flex text-center bg-white rounded-tl-xl border-l shadow-xl relative md:shrink-0">
-        <SideNav isMainOpen={isMainOpen} width={width} />
-        <PrimaryNav isMainOpen={isMainOpen} width={width} />
+      <div className="bg-gray-400 flex-auto flex text-center bg-white rounded-tl-xl relative md:shrink-0 overflow-y-hidden h-screen">
+        <SideNav isMainOpen={isMainOpen} />
+        <PrimaryNav isMainOpen={isMainOpen} />
         <div
-          className={
-            !isMainOpen && width >= 768
-              ? "w-full md:flex-auto h-screen shadow-lg"
-              : isMainOpen && width <= 768
-              ? "w-12 inset-y-0 right-0 transform translate-x-0 transition-all duration-500 ease-out shadow-lg"
-              : "w-full h-screen inset-y-0 right-0 transform translate-x-0 transition-all duration-500 ease-in shadow-lg"
-          }
+          className={` ${
+            isMainOpen ? "w-12 md:w-full" : "w-full"
+          } h-screen inset-y-0 right-0 transform translate-x-0 transition-all duration-500 ease-in-out`}
         >
-          <div className="flex flex-auto justify-between h-14 items-center px-3 border-b-2 border-b-slate-500">
+          <div className="flex flex-auto justify-between h-14 items-center px-3 border-b-2 border-b-slate-500 overflow-y-auto overflow-x-hidden">
             <div onClick={() => setIsMainOpen((item) => !item)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -45,15 +34,7 @@ const MainContent = () => {
             </div>
           </div>
           <div className="overflow-y-auto overflow-x-hidden">
-            <h3
-              className={
-                isMainOpen && width <= 768
-                  ? "hidden"
-                  : isMainOpen && width <= 768
-                  ? "block"
-                  : "block"
-              }
-            >
+            <h3 className={`${isMainOpen ? "hidden" : "block"} md:block`}>
               Main content
             </h3>
           </div>
