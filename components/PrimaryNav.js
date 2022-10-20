@@ -1,7 +1,7 @@
 const PrimaryNav = ({ isMainOpen }) => {
-  const data = [
+  const contentList = [
     {
-      name: "Content List",
+      name: "Content",
       title: "...",
     },
     {
@@ -116,7 +116,7 @@ const PrimaryNav = ({ isMainOpen }) => {
         </div>
       </div>
       <ul className="flex flex-col overflow-y-auto overflow-x-hidden h-screen">
-        {data.map((item, i) => {
+        {contentList.map((item, i) => {
           return (
             <li key={i} className="block p-4 border-b-2">
               <a className="flex justify-between">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import PrimaryNav from "./PrimaryNav";
 import SideNav from "./SideNav";
 
@@ -7,7 +7,7 @@ const MainContent = () => {
 
   return (
     <>
-      <div className="bg-gray-400 flex-auto flex text-center bg-white rounded-tl-xl relative md:shrink-0 overflow-y-hidden h-screen">
+      <div className="flex-auto flex text-center bg-white rounded-tl-xl relative md:shrink-0 overflow-y-hidden h-screen">
         <SideNav isMainOpen={isMainOpen} />
         <PrimaryNav isMainOpen={isMainOpen} />
         <div

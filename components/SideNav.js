@@ -1,37 +1,38 @@
 import React from "react";
+
 import {
-  Icon1,
-  Icon2,
-  Icon3,
-  Icon4,
-  Icon5,
-  Icon6,
-} from "../assets/icons/Icon1";
+  BeakerIcon,
+  AcademicCapIcon,
+  BookmarkSquareIcon,
+  CalendarIcon,
+  ChartPieIcon,
+  Cog6ToothIcon,
+} from "@heroicons/react/24/solid";
 
 const SideNav = ({ isMainOpen }) => {
   const sideNavData = [
     {
-      icon: <Icon1 />,
+      icon: <BeakerIcon />,
       text: "You",
     },
     {
-      icon: <Icon2 />,
+      icon: <AcademicCapIcon />,
       text: "Snippet",
     },
     {
-      icon: <Icon3 />,
+      icon: <BookmarkSquareIcon />,
       text: "Code",
     },
     {
-      icon: <Icon4 />,
+      icon: <CalendarIcon />,
       text: "Blog",
     },
     {
-      icon: <Icon5 />,
+      icon: <ChartPieIcon />,
       text: "Profile",
     },
     {
-      icon: <Icon6 />,
+      icon: <Cog6ToothIcon />,
       text: "All",
     },
   ];
@@ -52,8 +53,11 @@ const SideNav = ({ isMainOpen }) => {
               className="p-2 flex justify-center lg:justify-start border-b-2 border-gray-300 flex-col items-center"
               key={i}
             >
-              <span>{item.icon}</span>
-              <h3 className="overflow-hidden text-ellipsis max-w-[4rem] px-2 sm:px-0">
+              <span className="w-6 h-6">{item.icon}</span>
+              <h3
+                className="overflow-hidden text-ellipsis max-w-[4rem] px-2 sm:px-0"
+                title={item.text}
+              >
                 {item.text}
               </h3>
             </li>
