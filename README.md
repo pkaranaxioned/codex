@@ -28,22 +28,6 @@ If applicable:
 
 **\*Note:** the MVP does not have any user-specific customizations involved. It is all-access, GitHub managed collection of checklists.\*
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
 ## Roadmap
 
 - ➡️ Ideation: Define and Prepare for the MVP.
@@ -54,9 +38,9 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To be decided. Below are the current preferences.
 
-- **Frontend:** [Next.js](https://nextjs.org/) with SSG/ISR, [Tailwind CSS](https://tailwindcss.com/)
+- **Frontend:** [Astro](https://docs.astro.build/en/tutorial/0-introduction/), [Tailwind CSS](https://tailwindcss.com/)
 - **Backend:** [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/about-writing-and-formatting-on-github) (If we did need something more, I'd prefer to use something like [Supabase](https://supabase.com/))
-- **Hosting and CI/CD:** Netlify
+- **Hosting and CI/CD:** AWS Amplify
 
 ## Inspired by
 
