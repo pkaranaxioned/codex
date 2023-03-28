@@ -1,4 +1,4 @@
-export const categoryData = [
+export const snippetsData = [
   {
     category: 'react',
     'sub-category': [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { categoryData } from '../data/Category';
+import { snippetsData } from '../data/SnippetsData';
 
 export const CategoryListing = () => {
   return (
