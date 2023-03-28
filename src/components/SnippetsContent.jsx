@@ -2,6 +2,6 @@ import React from 'react'
 
 export const SnippetsContent = () => {
   return (
-    <div>SnippetsContent</div>
+    <div className='basis-3/5'>SnippetsContent</div>
   )
 }
