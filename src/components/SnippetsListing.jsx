@@ -1,7 +1,46 @@
 import React from 'react'
+import { IconBrandGooglePhotos } from '@tabler/icons-react';
 
 export const SnippetsListing = () => {
   return (
-    <div className='basis-1/5'>SnippetsListing</div>
+    <>
+      <div className='basis-1/5 text-light-grey bg-zinc-950'>
+        <div className='flex  flex-col'>
+          <h2 className='flex justify-center py-4 '>
+            <IconBrandGooglePhotos color="white" size={24} stroke={1} />
+            <span className='px-2'>Google Photos</span>
+          </h2>
+          <form action="#FIXME" name='Search' method='post' className='w-4/5  mx-[auto]'>
+            <div className='w-full'>
+              <input type="text" name="text" placeholder='Search' className='w-full outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500' />
+            </div>
+          </form>
+        </div>
+        <ul className='w-4/5  mx-[auto] py-8 h-[calc(100vh_-_100px)] overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
+          <li className='border-b-[1px] py-2 cursor-pointer '>
+            <button className='text-white font-semibold text-lg'>Clip</button>
+            <p className='text-sm py-3'>Clips that you save using the Google Clips app will appear in Google Photos or your phone's gallery.</p>
+          </li>
+          <li className='border-b-[1px] cursor-pointer py-2 md:hover:font-bold md:hover:text-purple-400 md:hover:border-b-purple-400 transition-all'>
+            <button className='text-white font-semibold text-lg flex '>Sign In</button>
+            <p className='text-sm py-3'>Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign in.</p>
+            <div className='mt-3'>
+              <h2 className='text-white font-semibold text-lg'>Tags</h2>
+              <ul className='py-4 flex flex-wrap [&>:not(:last-child)]:mr-2'>
+                <li><a href="#FIXME" title="#react" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:font-bold md:hover:text-purple-400  rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#react</a></li>
+                <li><a href="#FIXME" title="#redux" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:font-bold md:hover:text-purple-400 rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#redux</a></li>
+                <li><a href="#FIXME" title="#google" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:font-bold md:hover:text-purple-400  rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#google</a></li>
+                <li><a href="#FIXME" title="#js" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:font-bold md:hover:text-purple-400  rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#js</a></li>
+                <li><a href="#FIXME" title="#css" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:font-bold md:hover:text-purple-400  rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#css</a></li>
+              </ul>
+            </div>
+          </li>
+          <li className='border-b-[1px] py-2 cursor-pointer'>
+            <button className='text-white font-semibold text-lg'>Access </button>
+            <p className='text-sm py-3'>To access Google Photos on your phone, download Google Photos from the Google Play Store or iOS App Store.</p>
+          </li>
+        </ul>
+      </div>
+    </>
   )
 }
