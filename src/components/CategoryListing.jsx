@@ -20,125 +20,125 @@ import {
 export const CategoryListing = () => {
   return (
     <aside className='p-4 lg:basis-1/5 lg:block bg-dark-grey h-screen'>
-      <h1 className='text-4xl font-bold mb-8 text-white'>Codex</h1>
-      <div className="">
+      <h1 className='text-4xl font-bold text-white'>Codex</h1>
+      <div className='h-[calc(100vh_-_80px)] mt-8 overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
         <h2 className='text-sm mb-4 font-bold text-light-grey'>Snippets</h2>
-        <ul className='border-solid rounded-xl border-ax-violet [&>:not(:last-child)]:mb-2 text-light-grey text-sm font-medium overflow-y-auto h-60 no-scrollbar::-webkit-scrollbar no-scrollbar'>
+        <ul className='border-solid rounded-xl border-ax-violet [&>:not(:last-child)]:mb-2 text-light-grey text-sm font-medium'>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="React" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandReact color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>react</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>React</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>20</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Google Suite" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandGoogle color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Google Suite</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Google Suite</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>5</span>
-            </button>
+            </a>
 
             <div className='ml-6 mt-2 [&>:not(:last-child)]:mb-2'>
-              <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+              <a href="#FIXME" title="Gmail" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
                 <IconBrandGmail color="white" size={24} stroke={1} />
-                <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Gmail</span>
+                <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Gmail</span>
                 <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>2</span>
-              </button>
-              <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+              </a>
+              <a href="#FIXME" title="Google Photos" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
                 <IconBrandGooglePhotos color="white" size={24} stroke={1} />
-                <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Google Photos</span>
+                <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Google Photos</span>
                 <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>3</span>
-              </button>
+              </a>
             </div>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Javascript" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandJavascript color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Javascript</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Javascript</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>240</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="HTML" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconHtml color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>HTML</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>HTML</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>100</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="CSS" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandCss3 color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>CSS</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>CSS</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>98</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="PHP" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandPhp color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>PHP</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>PHP</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>36</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="WordPress" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandWordpress color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>WordPress</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>WordPress</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>14</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Node" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandNpm color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Node</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Node</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>55</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Gatsby" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandGatsby color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Gatsby</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Gatsby</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>01</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Docusaurus" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandDeno color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Docusaurus</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Docusaurus</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>35</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="Figma" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconBrandFigma color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>Figma</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Figma</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>64</span>
-            </button>
+            </a>
           </li>
           <li>
-            <button className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+            <a href="#FIXME" title="SEO" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
               <IconSeo color="white" size={24} stroke={1} />
-              <span className='capitalize ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left ml-2'>SEO</span>
+              <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>SEO</span>
               <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>68</span>
-            </button>
+            </a>
           </li>
         </ul>
-      </div>
-      <div className='mt-3'>
-        <h2 className='text-sm mb-4 font-bold text-light-grey'>Tags</h2>
-        <ul className='flex flex-wrap [&>:not(:last-child)]:mr-2 h-13 overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#react</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#redux</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#google</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#js</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#css</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#responsive</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#react</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#redux</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#google</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#js</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#css</button></li>
-          <li><button className='md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full	text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#responsive</button></li>
-        </ul>
+        <div className='mt-3'>
+          <h2 className='text-sm font-bold text-light-grey'>Tags</h2>
+          <ul className='py-4 flex flex-wrap [&>:not(:last-child)]:mr-2'>
+            <li><a href="#FIXME" title="#react" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#react</a></li>
+            <li><a href="#FIXME" title="#redux" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#redux</a></li>
+            <li><a href="#FIXME" title="#google" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#google</a></li>
+            <li><a href="#FIXME" title="#js" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#js</a></li>
+            <li><a href="#FIXME" title="#css" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#css</a></li>
+            <li><a href="#FIXME" title="#responsive" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#responsive</a></li>
+            <li><a href="#FIXME" title="#react" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#react</a></li>
+            <li><a href="#FIXME" title="#redux" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#redux</a></li>
+            <li><a href="#FIXME" title="#google" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#google</a></li>
+            <li><a href="#FIXME" title="#js" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#js</a></li>
+            <li><a href="#FIXME" title="#css" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#css</a></li>
+            <li><a href="#FIXME" title="#responsive" className='block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white rounded-full text-light-grey text-sm bg-light-pink py-1 px-3 mb-2'>#responsive</a></li>
+          </ul>
+        </div>
       </div>
     </aside>
   )
