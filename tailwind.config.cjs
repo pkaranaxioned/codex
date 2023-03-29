@@ -14,7 +14,9 @@ module.exports = {
 				'dark-grey-2': '#262525',
 				'light-grey': '#ffffff99',
 				'red': '#ff6363',
-				'light-red': '#fd828226'
+				'light-red': '#fd828226',
+				'pink': '#E41C79',
+				'light-pink': 'rgba(228, 28, 121, 0.15)',
 			},
 			spacing: {
         '60': '60vh',
