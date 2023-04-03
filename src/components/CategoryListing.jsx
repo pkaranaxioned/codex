@@ -1,4 +1,6 @@
 import React from 'react';
+import { useStore } from '@nanostores/react';
+import { loadCatListing } from '../store/snippetCatListing';
 import { 
   IconBrandReact,
   IconBrandDeno,
@@ -13,15 +15,21 @@ import {
   IconBrandGoogle,
   IconBrandGmail,
   IconBrandGooglePhotos,
-  IconSeo
+  IconSeo,
+  IconX
  } from '@tabler/icons-react';
 
-
 export const CategoryListing = () => {
+  const isCatListingVisible = useStore(loadCatListing);
   return (
-    <aside className='p-4 lg:basis-1/5 lg:block bg-dark-grey h-screen'>
-      <h1 className='text-4xl font-bold text-white'>Codex</h1>
-      <div className='h-[calc(100vh_-_80px)] mt-8 overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
+    <aside className={`${isCatListingVisible ? 'animate-slide-in' : 'animate-slide-out'} lg:animate-none p-4 w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
+      <div className='py-4 flex items-center justify-between lg:justify-center'>
+        <h1 className='text-4xl font-bold text-white'>Codex</h1>
+        <span className='lg:hidden block' onClick={() => loadCatListing.set(!isCatListingVisible)} >
+          <IconX color="white" size={24} stroke={1} />
+        </span>
+      </div>
+      <div className='h-[calc(100vh_-_80px)] overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
         <h2 className='text-sm mb-4 font-bold text-light-grey'>Snippets</h2>
         <ul className='border-solid rounded-xl border-ax-violet [&>:not(:last-child)]:mb-2 text-light-grey text-sm font-medium'>
           <li>
