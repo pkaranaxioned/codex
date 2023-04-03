@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStore } from '@nanostores/react';
-import { loadCatListing } from '../store/snippetCatListing';
+import { slideCatListing } from '../store/snippetCatListing';
 import { 
   IconBrandReact,
   IconBrandDeno,
@@ -20,12 +20,12 @@ import {
  } from '@tabler/icons-react';
 
 export const CategoryListing = () => {
-  const isCatListingVisible = useStore(loadCatListing);
+  const $slideCatListing = useStore(slideCatListing);
   return (
-    <aside className={`${isCatListingVisible ? 'animate-slide-in' : 'animate-slide-out'} lg:animate-none p-4 w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
+    <aside className={`${$slideCatListing ? 'animate-slide-in' : 'animate-slide-out'} lg:animate-none p-4 w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
       <div className='py-4 flex items-center justify-between lg:justify-center'>
         <h1 className='text-4xl font-bold text-white'>Codex</h1>
-        <span className='lg:hidden block' onClick={() => loadCatListing.set(!isCatListingVisible)} >
+        <span className='lg:hidden block' onClick={() => slideCatListing.set(!$slideCatListing)} >
           <IconX color="white" size={24} stroke={1} />
         </span>
       </div>
