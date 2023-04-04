@@ -25,7 +25,7 @@ export const SnippetsListing = () => {
               <IconBrandGooglePhotos color="white" size={24} stroke={1} />
               <span className='px-2'>Google Photos</span>
             </h2>
-            <span className='md:hidden block cursor-pointer ' title='close' onClick={() => slideSubCatListing.set(!$slideSubCatListing)} >
+            <span className='md:hidden block cursor-pointer relative top-[-40px] left-[93%] ' title='Close' onClick={() => slideSubCatListing.set(!$slideSubCatListing)} >
           <IconX color="white" size={24} stroke={1} />
         </span>
           </div>
