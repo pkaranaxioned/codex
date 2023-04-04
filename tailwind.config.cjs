@@ -35,10 +35,20 @@ module.exports = {
           'from': { 'transform': 'translateX(0)' },
           'to': { 'transform': 'translateX(-100%)' }
         },
+		'fed-in': {
+			'from': { 'right': '-100%'},
+			'to': { 'right': '0'}
+		},
+		'fed-out': {
+			'from': { 'right': '0'},
+			'to': { 'right': '-100%'}
+		}
       },
       animation: {
         'slide-in': 'slide-in .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
         'slide-out': 'slide-out .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+		'fed-in': 'fed-in .8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+		'fed-out': 'fed-out .8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
       }
 		},
 	},

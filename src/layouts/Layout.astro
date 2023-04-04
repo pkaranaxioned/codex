@@ -25,7 +25,7 @@ const { title } = Astro.props;
 		<div class="flex overflow-hidden">
 			<CategoryListing client:load />
 			<SnippetsListing client:load />
-			<SnippetsContent/>
+			<SnippetsContent client:load/>
 		</div>
 		<slot />
 	</body>

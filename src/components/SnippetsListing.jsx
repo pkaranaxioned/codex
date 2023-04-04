@@ -2,12 +2,15 @@ import React from 'react'
 import { IconBrandGooglePhotos } from '@tabler/icons-react';
 import { useStore } from '@nanostores/react';
 import { slideCatListing } from '../store/snippetCatListing';
+import { slideSubCatListing } from '../store/snippetSubCatListing';
+import { IconX } from '@tabler/icons-react';
 
 export const SnippetsListing = () => {
   const $slideCatListing = useStore(slideCatListing);
+  const $slideSubCatListing = useStore(slideSubCatListing)
   return (
     <>
-      <div className='basis-2/6 lg:basis-1/5 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e]'>
+      <div className={`${$slideSubCatListing ? 'animate-fed-in' : 'animate-fed-out'} lg:animate-none md:relative lg:top-0 right-0 absolute  basis-2/6 lg:basis-1/5 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] ease-in-out`}>
         <div className='flex  flex-col py-5'>
           <div className="flex flex-col items-start lg:flex-row m-auto w-4/5 lg:w-auto justify-between lg:justify-center">
             <button className='mr-2 w-10 h-10 lg:hidden block' onClick={() => slideCatListing.set(!$slideCatListing)}>
@@ -17,10 +20,13 @@ export const SnippetsListing = () => {
               <IconBrandGooglePhotos color="white" size={24} stroke={1} />
               <span className='px-2'>Google Photos</span>
             </h2>
+            <span className='md:hidden block cursor-pointer ' title='close' onClick={() => slideSubCatListing.set(!$slideSubCatListing)} >
+          <IconX color="white" size={24} stroke={1} />
+        </span>
           </div>
           <form action="#FIXME" name='Search' method='post' className='w-4/5  mx-[auto]'>
             <div className='w-full'>
-              <input type="text" name="text" placeholder='Search' className='w-full outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-purple-500 dark:focus:border-purple-500' />
+              <input type="text" name="text" placeholder='Search' className='w-full outline-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-fuchsia-600 focus:border-fuchsia-600 block w-full p-1.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-fuchsia-600 dark:focus:border-fuchsia-600' />
             </div>
           </form>
         </div>
@@ -29,9 +35,9 @@ export const SnippetsListing = () => {
             <button className='text-white font-semibold text-lg'>Clip</button>
             <p className='text-sm py-3'>Clips that you save using the Google Clips app will appear in Google Photos or your phone's gallery.</p>
           </li>
-          <li className='border-b-[1px] group cursor-pointer text-white py-2 md:hover:font-bold md:hover:text-purple-400 md:hover:border-b-purple-400 transition-all duration-[0.3s]'>
+          <li className='border-b-[1px] group cursor-pointer text-white py-2 md:hover:font-bold  md:hover:text-fuchsia-400 md:hover:border-b-purple-400 transition-all duration-[0.3s]'>
             <button className='font-semibold text-lg flex '>Sign In</button>
-            <p className='text-sm py-3 text-light-grey group-hover:text-purple-400 transition-all duration-[0.3s]'>Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign in.</p>
+            <p className='text-sm py-3 text-light-grey md:group-hover:text-fuchsia-400 transition-all duration-[0.3s]'>Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign in.</p>
             <div className='mt-3 h-0 overflow-hidden  group-hover:h-full   transition-all duration-[0.3s]'>
               <h2 className='font-semibold text-lg '>Tags</h2>
               <ul className='py-4 flex flex-wrap [&>:not(:last-child)]:mr-2'>
