@@ -22,7 +22,7 @@ import {
 export const CategoryListing = () => {
   const $slideCatListing = useStore(slideCatListing);
   return (
-    <aside className={`${$slideCatListing ? 'animate-slide-in' : 'animate-slide-out'} lg:animate-none p-4 w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
+    <aside className={`${$slideCatListing ? 'animate-slide-in' : 'animate-slide-out'} border-0 lg:border-r-2 border-light-grey  lg:animate-none p-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
       <div className='py-4 flex items-center justify-between lg:justify-center'>
         <h1 className='text-4xl font-bold text-white'>Codex</h1>
         <span className='lg:hidden block cursor-pointer' onClick={() => slideCatListing.set(!$slideCatListing)} >

@@ -7,13 +7,18 @@ import { IconX } from '@tabler/icons-react';
 
 export const SnippetsListing = () => {
   const $slideCatListing = useStore(slideCatListing);
-  const $slideSubCatListing = useStore(slideSubCatListing)
+  const $slideSubCatListing = useStore(slideSubCatListing);
+
+  const changeListingState = () => {
+    slideCatListing.set(!$slideCatListing);
+    slideSubCatListing.set(!$slideSubCatListing);
+  }
   return (
     <>
-      <div className={`${$slideSubCatListing ? 'animate-fed-in' : 'animate-fed-out'} lg:animate-none md:relative lg:top-0 right-0 absolute  basis-2/6 lg:basis-1/5 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] ease-in-out`}>
+      <div className={`${$slideSubCatListing ? 'animate-fed-in' : 'animate-fed-out'} bg-dark-grey absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 lg:basis-1/5 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] ease-in-out`}>
         <div className='flex  flex-col py-5'>
-          <div className="flex flex-col items-start lg:flex-row m-auto w-4/5 lg:w-auto justify-between lg:justify-center">
-            <button className='mr-2 w-10 h-10 lg:hidden block' onClick={() => slideCatListing.set(!$slideCatListing)}>
+          <div className="flex flex-col items-start lg:flex-row w-4/5 m-auto justify-between lg:justify-center">
+            <button className='mr-2 w-10 h-10 lg:hidden block' onClick={() => changeListingState() }>
               <img src="assets/Codex-logo.svg" alt="Codex" />
             </button>
             <h2 className='flex justify-center py-4 '>
