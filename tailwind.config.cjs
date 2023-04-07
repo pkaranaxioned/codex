@@ -13,6 +13,7 @@ module.exports = {
 				'dark-grey': '#0D0D0D',
 				'dark-grey-2': '#262525',
 				'light-grey': '#ffffff99',
+				'light-grey-2': '#ffffff1a',
 				'red': '#ff6363',
 				'light-red': '#fd828226',
 				'pink': '#E41C79',
@@ -27,28 +28,28 @@ module.exports = {
           'from': { 'opacity': '0' },
           'to': { 'opacity': '1' }
         },
-        'slide-in': {
+        'slide-in-left': {
           'from': { 'transform': 'translateX(-100%)' },
           'to': { 'transform': 'translateX(0)' }
         },
-        'slide-out': {
+        'slide-out-left': {
           'from': { 'transform': 'translateX(0)' },
           'to': { 'transform': 'translateX(-100%)' }
         },
-		'fed-in': {
-			'from': { 'right': '-100%'},
-			'to': { 'right': '0'}
-		},
-		'fed-out': {
-			'from': { 'right': '0'},
-			'to': { 'right': '-100%'}
-		}
+				'slide-in-right': {
+					'from': { 'right': '-100%'},
+					'to': { 'right': '0'}
+				},
+				'slide-out-right': {
+					'from': { 'right': '0'},
+					'to': { 'right': '-100%'}
+				}
       },
       animation: {
-        'slide-in': 'slide-in .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-        'slide-out': 'slide-out .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-		'fed-in': 'fed-in .8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-		'fed-out': 'fed-out .8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+        'slide-in-left': 'slide-in-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+        'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'slide-in-right': 'slide-in-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'slide-out-right': 'slide-out-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
       }
 		},
 	},
