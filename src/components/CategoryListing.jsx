@@ -22,7 +22,7 @@ import {
 export const CategoryListing = () => {
   const $slideCatListing = useStore(slideCatListing);
   return (
-    <aside className={`${$slideCatListing ? 'animate-slide-in' : 'animate-slide-out'} border-0 lg:border-r-2 border-light-grey  lg:animate-none p-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
+    <aside className={`${$slideCatListing ? 'animate-slide-in-left' : 'animate-slide-out-left'} category border-0 lg:border-r-[1px] border-light-grey border-solid lg:animate-none p-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative lg:basis-1/5 block bg-dark-grey h-screen`}>
       <div className='py-4 flex items-center justify-between lg:justify-center'>
         <h1 className='text-4xl font-bold text-white'>Codex</h1>
         <span className='lg:hidden block cursor-pointer' title="Close" onClick={() => slideCatListing.set(!$slideCatListing)} >
@@ -52,7 +52,7 @@ export const CategoryListing = () => {
                 <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Gmail</span>
                 <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>2</span>
               </a>
-              <a href="#FIXME" title="Google Photos" className='w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
+              <a href="#FIXME" title="Google Photos" className='active w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-white transition-all flex p-3 rounded-xl relative'>
                 <IconBrandGooglePhotos color="white" size={24} stroke={1} />
                 <span className='ml-2 text-ellipsis overflow-hidden whitespace-nowrap w-2/4 block text-left'>Google Photos</span>
                 <span className='rounded-full	text-pink bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs'>3</span>
