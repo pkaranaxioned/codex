@@ -1,9 +1,8 @@
 ---
 import { CategoryListing } from '../components/CategoryListing';
-import Header from '../components/Header.astro';
 import SnippetsContent from '../components/SnippetsContent.astro';
 import { SnippetsListing } from '../components/SnippetsListing';
-import Wrapper from '../components/UI/Wrapper.astro';
+import  "../../src/styles/global.css";
 export interface Props {
 	title: string;
 }
@@ -18,7 +17,6 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="../../src/styles/global.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
