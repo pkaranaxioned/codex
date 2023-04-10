@@ -35,14 +35,14 @@ export const SnippetsListing = () => {
             </div>
           </form>
         </div>
-        <ul className='w-4/5  mx-[auto] py-8 h-[calc(100vh_-_100px)] overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar'>
-          <li className='border-b-[1px] py-2 cursor-pointer '>
+        <ul className='mx-[auto] py-8 h-[calc(100vh_-_100px)] overflow-y-auto no-scrollbar::-webkit-scrollbar no-scrollbar [&>:not(:last-child)]:border-b-1 [&>:not(:last-child)]:border-white [&>:not(:last-child)]:border-solid'>
+          <li className='border-b-[1px] py-2 cursor-pointer  px-6'>
             <button className='text-white font-semibold text-lg'>Clip</button>
             <p className='text-sm py-3'>Clips that you save using the Google Clips app will appear in Google Photos or your phone's gallery.</p>
           </li>
-          <li className='border-b-[1px] group cursor-pointer text-white py-2 md:hover:font-bold  md:hover:text-fuchsia-400 md:hover:border-b-purple-400 transition-all duration-[0.3s]'>
+          <li className='border-b-[1px] group cursor-pointer text-white py-2 md:hover:font-bold  md:hover:border-b-purple-400 transition-all duration-[0.3s] md:hover:bg-ax-violet px-6'>
             <button className='font-semibold text-lg flex '>Sign In</button>
-            <p className='text-sm py-3 text-light-grey md:group-hover:text-fuchsia-400 transition-all duration-[0.3s]'>Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign in.</p>
+            <p className='text-sm py-3 text-light-grey  transition-all duration-[0.3s]'>Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign in.</p>
             <div className='mt-3 h-0 overflow-hidden  group-hover:h-full   transition-all duration-[0.3s]'>
               <h2 className='font-semibold text-lg '>Tags</h2>
               <ul className='py-4 flex flex-wrap [&>:not(:last-child)]:mr-2'>
@@ -54,7 +54,7 @@ export const SnippetsListing = () => {
               </ul>
             </div>
           </li>
-          <li className='border-b-[1px] py-2 cursor-pointer'>
+          <li className='border-b-[1px] py-2 cursor-pointer px-6'>
             <button className='text-white font-semibold text-lg'>Access </button>
             <p className='text-sm py-3'>To access Google Photos on your phone, download Google Photos from the Google Play Store or iOS App Store.</p>
           </li>
