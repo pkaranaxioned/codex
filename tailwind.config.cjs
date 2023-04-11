@@ -20,22 +20,22 @@ module.exports = {
 				'light-pink': 'rgba(228, 28, 121, 0.15)',
 			},
 			spacing: {
-        '60': '60vh',
-        '13': '13vh',
-      },
+				'60': '60vh',
+				'13': '13vh',
+			},
 			keyframes: {
-        'fade': {
-          'from': { 'opacity': '0' },
-          'to': { 'opacity': '1' }
-        },
-        'slide-in-left': {
-          'from': { 'transform': 'translateX(-100%)' },
-          'to': { 'transform': 'translateX(0)' }
-        },
-        'slide-out-left': {
-          'from': { 'transform': 'translateX(0)' },
-          'to': { 'transform': 'translateX(-100%)' }
-        },
+				'fade': {
+					'from': { 'opacity': '0' },
+					'to': { 'opacity': '1' }
+				},
+				'slide-in-left': {
+					'from': { 'transform': 'translateX(-100%)' },
+					'to': { 'transform': 'translateX(0)' }
+				},
+				'slide-out-left': {
+					'from': { 'transform': 'translateX(0)' },
+					'to': { 'transform': 'translateX(-100%)' }
+				},
 				'slide-in-right': {
 					'from': { 'right': '-100%'},
 					'to': { 'right': '0'}
@@ -44,13 +44,13 @@ module.exports = {
 					'from': { 'right': '0'},
 					'to': { 'right': '-100%'}
 				}
-      },
-      animation: {
-        'slide-in-left': 'slide-in-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-        'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+			},
+			animation: {
+				'slide-in-left': 'slide-in-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-in-right': 'slide-in-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-out-right': 'slide-out-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-      },
+			},
 			typography: {
 				DEFAULT: {
 					css: {
@@ -98,24 +98,40 @@ module.exports = {
 						},
 					}
 				}
-			}
+			},
 		},
 	},
 	plugins: [
 		plugin(function({ addUtilities }) {
-      addUtilities({
+			addUtilities({
 				/* Hide scrollbar for Chrome, Safari and Opera */
 				'.no-scrollbar::-webkit-scrollbar': {
-						'display': 'none',
+					'display': 'none',
 				},
-
+				
 				/* Hide scrollbar for IE, Edge and Firefox */
 				'.no-scrollbar': {
-						'-ms-overflow-style': 'none', /* IE and Edge */
-						'scrollbar-width': 'none',  /* Firefox */
-				}
-      })
-    }),
+					'-ms-overflow-style': 'none', /* IE and Edge */
+					'scrollbar-width': 'none',  /* Firefox */
+				},
+				
+				'.scrollbar::-webkit-scrollbar': {
+					'width': '12px'
+				},
+				
+				'.scrollbar::-webkit-scrollbar-track': {
+					'border-radius': '10px',
+					'background': 'rgba(0, 0, 0, 0)'
+				},
+				'.scrollbar::-webkit-scrollbar-thumb': {
+					'background': '#E41C79',
+					'border-radius': '999999px',
+					'border': '5px solid rgba(0, 0, 0, 0)',
+					'background-clip': 'padding-box'
+				},
+				
+			})
+		}),
 		require('@tailwindcss/typography'),
 	],
 }
