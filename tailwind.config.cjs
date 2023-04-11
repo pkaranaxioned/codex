@@ -50,7 +50,55 @@ module.exports = {
         'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-in-right': 'slide-in-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-out-right': 'slide-out-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-      }
+      },
+			typography: {
+				DEFAULT: {
+					css: {
+						p: {
+							fontSize: '16px',
+							color: '#fff'
+						},
+						li: {
+							fontSize: '16px',
+							color: '#fff'
+						},
+						a: {
+							color: '#E41C79',
+							'text-decoration-line': 'none',
+							'&:hover': {
+								'text-decoration-line': 'underline'
+							}
+						},
+						ul: {
+							marginTop: '0',
+							marginBottom: '16px'
+						},
+						table: {
+							borderCollapse: 'collapse',
+							width: '100%'
+						},
+						th: {
+							padding: '12px',
+							border: '1px solid #fff',
+							lineHeight: '24px',
+							textAlign: 'center',
+							verticalAlign: 'middle',
+							background: '#201547'
+						},
+						td: {
+							padding: '8px',
+							border: '1px solid #fff',
+							lineHeight: '24px',
+							color: '#fff'
+						},
+						tr: {
+							padding: '8px',
+							border: '1px solid #fff',
+							lineHeight: '24px'
+						},
+					}
+				}
+			}
 		},
 	},
 	plugins: [
@@ -67,6 +115,7 @@ module.exports = {
 						'scrollbar-width': 'none',  /* Firefox */
 				}
       })
-    })
+    }),
+		require('@tailwindcss/typography'),
 	],
 }
