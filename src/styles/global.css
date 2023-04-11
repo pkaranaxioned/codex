@@ -35,4 +35,11 @@
   .markdown-data code {
     @apply py-[1.5px] px-2 rounded-lg bg-light-grey-2 text-sm border-white;
   }
+
+  .line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
 }
