@@ -1,96 +1,26 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img { display: block; }
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-table td, table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-  line-height: 25px;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .markdown-data {
-    /* @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded; */
+@layer base {
+
+  * {
+    word-break: break-word;
   }
-  
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white font-bold;
+  }
+}
+
+@layer components {
   .category .active {
     @apply bg-ax-violet font-bold text-white;
-  }
-
-  .markdown-data table{
-    @apply w-full;
-  }
-
-  .markdown-data table th{
-    @apply py-3 text-center bg-ax-violet text-white align-middle;
-  }
-
-  .markdown-data table tr,
-  .markdown-data table td {
-    @apply py-2 border-2 border-white leading-6 text-white;
-  }
-
-  .markdown-data a {
-    @apply text-pink
-  }
-
-  .markdown-data a:hover {
-    @apply underline md:no-underline
   }
 
   .markdown-data h1,
@@ -99,31 +29,7 @@ table td, table th {
   .markdown-data h4,
   .markdown-data h5,
   .markdown-data h6 {
-    @apply text-white font-bold mb-4;
-  }
-
-  .markdown-data h1 {
-    @apply text-6xl;
-  }
-
-  .markdown-data h2 {
-    @apply text-5xl;
-  }
-
-  p, ul {
-    @apply text-white
-  }
-
-  .markdown-data  ul {
-    @apply list-disc ml-4 mb-6;
-  }
-
-  .markdown-data li {
-    @apply break-words;
-  }
-
-  .markdown-data p:not(:last-child) {
-    @apply mb-4
+    @apply mt-0 mb-5;
   }
 
   .markdown-data code {
