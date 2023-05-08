@@ -1,6 +1,6 @@
 ---
-import { CategoryListing } from '../components/CategoryListing';
-import SnippetsContent from '../components/SnippetsContent.astro';
+import { Category } from '../components/Category';
+import SnippetsContent from '../components/Content.astro';
 import { SnippetsListing } from '../components/SnippetsListing';
 import  "../../src/styles/global.css";
 export interface Props {
@@ -22,7 +22,7 @@ const { title } = Astro.props;
 	</head>
 	<body class="font-poppins h-screen bg-black overflow-hidden">
 		<div class="flex overflow-hidden relative">
-			<CategoryListing client:load />
+			<Category client:load />
 			<SnippetsListing client:load />
 			<SnippetsContent />
 		</div>

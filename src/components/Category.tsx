@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import { useStore } from '@nanostores/react';
 import { slideCatListing } from '../store/snippetCatListing';
 import { 
@@ -19,7 +19,7 @@ import {
   IconX
  } from '@tabler/icons-react';
 
-export const CategoryListing = () => {
+export const Category: React.FC = (): JSX.Element => {
   const $slideCatListing = useStore(slideCatListing);
   return (
     <aside className={`${$slideCatListing ? 'animate-slide-in-left' : 'animate-slide-out-left'} category overflow-hidden border-0 lg:border-r-[1px] border-light-grey border-solid lg:animate-none py-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative xl:basis-1/5 lg:basis-1/4 block bg-dark-grey h-screen`}>
