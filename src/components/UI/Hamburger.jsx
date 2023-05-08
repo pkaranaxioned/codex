@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconMenu2 } from '@tabler/icons-react'
 import { useStore } from '@nanostores/react';
-import { slideSubCatListing } from '../store/snippetSubCatListing';
+import { slideSubCatListing } from '../../store/snippetSubCatListing';
 
 export const Hamburger = () => {
 const $slideSubCatListing = useStore(slideSubCatListing);
