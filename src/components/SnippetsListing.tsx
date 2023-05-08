@@ -1,11 +1,11 @@
-import React from 'react'
+import type React from 'react'
 import { IconBrandGooglePhotos } from '@tabler/icons-react';
 import { useStore } from '@nanostores/react';
 import { slideCatListing } from '../store/snippetCatListing';
 import { slideSubCatListing } from '../store/snippetSubCatListing';
 import { IconX } from '@tabler/icons-react';
 
-export const SnippetsListing = () => {
+export const SnippetsListing: React.FC = (): JSX.Element => {
   const $slideCatListing = useStore(slideCatListing);
   const $slideSubCatListing = useStore(slideSubCatListing);
 
