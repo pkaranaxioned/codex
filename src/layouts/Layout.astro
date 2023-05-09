@@ -1,4 +1,8 @@
 ---
+import { Category } from '../components/Category';
+import SnippetsContent from '../components/Content.astro';
+import { SnippetsListing } from '../components/SnippetsListing';
+import  "../../src/styles/global.css";
 export interface Props {
 	title: string;
 }
@@ -12,24 +16,16 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="font-poppins h-screen bg-black overflow-hidden">
+		<div class="flex overflow-hidden relative">
+			<Category client:load />
+			<SnippetsListing client:load />
+			<SnippetsContent />
+		</div>
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

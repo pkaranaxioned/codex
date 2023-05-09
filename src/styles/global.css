@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  * {
+    word-break: break-word;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-white font-bold;
+  }
+}
+
+@layer components {
+  .category .active {
+    @apply bg-ax-violet font-bold text-white;
+  }
+
+  .markdown-data h1,
+  .markdown-data h2,
+  .markdown-data h3,
+  .markdown-data h4,
+  .markdown-data h5,
+  .markdown-data h6 {
+    @apply mt-0 mb-5;
+  }
+
+  .markdown-data code {
+    @apply py-[1.5px] px-2 rounded-lg bg-light-grey-2 text-sm border-white;
+  }
+
+  .line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
