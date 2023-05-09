@@ -1,21 +1,20 @@
 import type React from 'react'
 import { IconBrandGooglePhotos } from '@tabler/icons-react';
 import { useStore } from '@nanostores/react';
-import { slideCatListing } from '../store/snippetCatListing';
-import { slideSubCatListing } from '../store/snippetSubCatListing';
+import {isCategory ,isSnippets}  from '../store/toggleState';
 import { IconX } from '@tabler/icons-react';
 
 export const SnippetsListing: React.FC = (): JSX.Element => {
-  const $slideCatListing = useStore(slideCatListing);
-  const $slideSubCatListing = useStore(slideSubCatListing);
-
+  const $isCategory = useStore(isCategory);
+  const $issnippet = useStore(isSnippets);
+  
   const changeListingState = () => {
-    slideCatListing.set(!$slideCatListing);
-    slideSubCatListing.set(false);
+    isCategory.set(!$isCategory);
+    isSnippets.set(false);
   }
   return (
     <>
-      <div className={`${$slideSubCatListing ? 'animate-slide-in-right' : 'animate-slide-out-right'} overflow-hidden border-0 lg:border-r-[1px] border-light-grey border-solid bg-dark-grey absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] lg:min-w-[300px]`}>
+      <div className={`${$issnippet ? 'animate-slide-in-right' : 'animate-slide-out-right'} overflow-hidden border-0 lg:border-r-[1px] border-light-grey border-solid bg-dark-grey absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] lg:min-w-[300px]`}>
         <div className='flex  flex-col py-5'>
           <div className="flex flex-col items-start lg:flex-row w-4/5 m-auto justify-between lg:justify-center">
             <button className='mr-2 w-10 h-10 lg:hidden block' onClick={() => changeListingState() }>
@@ -25,7 +24,7 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
               <IconBrandGooglePhotos color="white" size={24} stroke={1} />
               <span className='px-2'>Google Photos</span>
             </h2>
-            <span className='md:hidden block cursor-pointer relative top-[-40px] left-[93%] ' title='Close' onClick={() => slideSubCatListing.set(!$slideSubCatListing)} >
+            <span className='md:hidden block cursor-pointer relative top-[-40px] left-[93%] ' title='Close' onClick={() => changeListingState() } >
           <IconX color="white" size={24} stroke={1} />
         </span>
           </div>
