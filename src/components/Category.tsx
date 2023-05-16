@@ -3,6 +3,7 @@ import { useStore } from '@nanostores/react';
 import { isCategory }  from '../store/toggleState';
 import { Icons } from './icon';
 
+
 export const Category: React.FC = (): JSX.Element => {
   const $isCategory = useStore(isCategory);
   return (
