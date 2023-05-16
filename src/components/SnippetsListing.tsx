@@ -2,7 +2,7 @@ import type React from 'react'
 import { IconBrandGooglePhotos } from '@tabler/icons-react';
 import { useStore } from '@nanostores/react';
 import {isCategory ,isSnippets}  from '../store/toggleState';
-import { IconX } from '@tabler/icons-react';
+import { Icons } from './icon';
 
 export const SnippetsListing: React.FC = (): JSX.Element => {
   const $isCategory = useStore(isCategory);
@@ -21,11 +21,11 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
               <img src="assets/Codex-logo.svg" alt="Codex" />
             </button>
             <h2 className='flex justify-center py-4 '>
-              <IconBrandGooglePhotos color="white" size={24} stroke={1} />
+              <Icons.googlePhotos color="white" size={24} stroke={1} />
               <span className='px-2'>Google Photos</span>
             </h2>
             <span className='md:hidden block cursor-pointer relative top-[-40px] left-[93%] ' title='Close' onClick={() => changeListingState() } >
-          <IconX color="white" size={24} stroke={1} />
+          <Icons.close color="white" size={24} stroke={1} />
         </span>
           </div>
           <form action="#FIXME" name='Search' method='post' className='w-4/5  mx-[auto]'>
