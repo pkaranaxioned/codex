@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Icons } from '../icon';
+type test = {
+    isMobile: boolean
+}
 
-export const ToggleTheme: React.FC = () => {
+export const ToggleTheme: React.FC<test> = ({isMobile=false}) => {
     const [theme, setTheme] = useState<string>('dark');
     const [icon, setIcon] = useState<JSX.Element | null>(
         <Icons.system className="text-white" size={24} stroke={1} />
@@ -41,7 +44,7 @@ export const ToggleTheme: React.FC = () => {
     }, [theme]);
 
     return (
-        <div className="absolute right-[2.5%]">
+        <div className={`${isMobile? 'block' : 'hidden'} absolute right-[2.5%]`}>
             <button onClick={toggleThemeDropdown} className="flex mr-1 items-center text-white font-bold">
                 <span>{icon}</span>
                 <span className="text-[14px] ml-[3px]">Theme</span>
