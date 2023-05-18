@@ -10,13 +10,11 @@ export const ToggleTheme: React.FC = () => {
 
     // Set icon based on theme
     useEffect(() => {
-        if (theme === 'dark') {
-            setIcon(<Icons.darkTheme className="text-white" size={24} stroke={1} />);
-        } else if (theme === 'light') {
-            setIcon(<Icons.lightTheme className="text-white" size={24} stroke={1} />);
-        } else {
-            setIcon(<Icons.system className="text-white" size={24} stroke={1} />);
-        }
+        setIcon(
+            theme === 'dark' ? <Icons.darkTheme className="text-white" size={24} stroke={1} /> : theme === 'light'
+                ? <Icons.lightTheme className="text-white" size={24} stroke={1} />
+                : <Icons.system className="text-white" size={24} stroke={1} />
+        );
     }, [theme]);
 
     // Toggle the theme dropdown
@@ -38,28 +36,19 @@ export const ToggleTheme: React.FC = () => {
 
     // Update CSS class based on theme
     useEffect(() => {
-        const body = document.body;
-
-        body.classList.remove('light', 'dark');
-
-        if (theme === 'system') {
-            body.classList.add(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        } else {
-            body.classList.add(theme);
-        }
+        document.body.classList.remove('light', 'dark');
+        document.body.classList.add(theme === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme);
     }, [theme]);
 
     return (
-        <div className="absolute w-36 right-[2.5%]">
-            <div className="flex justify-end">
-                <button onClick={toggleThemeDropdown} className="flex items-center text-white font-bold">
-                    <span>{icon}</span>
-                    <span className="text-[14px] ml-[3px]">Theme</span>
-                </button>
-            </div>
+        <div className="absolute right-[2.5%]">
+            <button onClick={toggleThemeDropdown} className="flex mr-1 items-center text-white font-bold">
+                <span>{icon}</span>
+                <span className="text-[14px] ml-[3px]">Theme</span>
+            </button>
             <ul
                 className={`${dropDownState ? 'block' : 'hidden'
-                    } w-full bg-slate-800 overflow-hidden rounded text-left absolute top-[9px] right-[2.3%] list-none pl-0`}
+                    } w-36 bg-slate-800 overflow-hidden rounded text-left absolute top-[9px] right-[2.3%] list-none pl-0`}
             >
                 <li
                     className={`cursor-pointer m-0 p-1 hover:bg-slate-500 ${theme === 'light' ? 'bg-slate-500' : ''}`}

@@ -1,5 +1,4 @@
 import type React from 'react'
-import { IconBrandGooglePhotos } from '@tabler/icons-react';
 import { useStore } from '@nanostores/react';
 import {isCategory ,isSnippets}  from '../store/toggleState';
 import { Icons } from './icon';
