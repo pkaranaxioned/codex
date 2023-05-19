@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Icons } from '../icon';
-type test = {
+type themeProp = {
     isMobile: boolean
 }
 
-export const ToggleTheme: React.FC<test> = ({isMobile=false}) => {
+export const ToggleTheme: React.FC<themeProp> = ({isMobile=false}) => {
     const [theme, setTheme] = useState<string>('dark');
     const [icon, setIcon] = useState<JSX.Element | null>(
         <Icons.system className="text-white" size={24} stroke={1} />
@@ -34,7 +34,7 @@ export const ToggleTheme: React.FC<test> = ({isMobile=false}) => {
     // Check system preference and set initial theme
     useEffect(() => {
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setTheme(prefersDarkMode ? 'dark' : 'light');
+        setTheme(prefersDarkMode ? 'dark' : 'system');
     }, []);
 
     // Update CSS class based on theme
@@ -44,14 +44,14 @@ export const ToggleTheme: React.FC<test> = ({isMobile=false}) => {
     }, [theme]);
 
     return (
-        <div className={`${isMobile? 'block' : 'hidden'} absolute right-[2.5%]`}>
+        <div className={`${isMobile? 'block' : 'hidden'} absolute top-6 right-[2.5%]`}>
             <button onClick={toggleThemeDropdown} className="flex mr-1 items-center text-white font-bold">
                 <span>{icon}</span>
                 <span className="text-[14px] ml-[3px]">Theme</span>
             </button>
             <ul
                 className={`${dropDownState ? 'block' : 'hidden'
-                    } w-36 bg-slate-800 overflow-hidden rounded text-left absolute top-[9px] right-[2.3%] list-none pl-0`}
+                    } w-36 bg-slate-800 overflow-hidden rounded text-left absolute z-10 top-[30px] right-[2.3%] list-none pl-0`}
             >
                 <li
                     className={`cursor-pointer m-0 p-1 hover:bg-slate-500 ${theme === 'light' ? 'bg-slate-500' : ''}`}
