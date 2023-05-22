@@ -2,7 +2,6 @@ import type React from 'react'
 import { useStore } from '@nanostores/react';
 import {isCategory ,isSnippets}  from '../store/toggleState';
 import { Icons } from './icon';
-import { ToggleTheme } from './UI/ThemeToggle';
 
 export const SnippetsListing: React.FC = (): JSX.Element => {
   const $isCategory = useStore(isCategory);
@@ -16,7 +15,6 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
     <>
       <div className={`${$issnippet ? 'animate-slide-in-right' : 'animate-slide-out-right'} overflow-hidden border-0 lg:border-r-[1px] border-light-grey border-solid bg-dark-grey absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 text-light-grey bg-zinc-950 border-r-[1px] border-[#1d1f1e] lg:min-w-[300px] z-10`}>
         <div className='block md:hidden'>
-        <ToggleTheme />
         </div>
         <div className='flex  flex-col py-5'>
           <div className="flex flex-col items-start lg:flex-row w-4/5 m-auto justify-between lg:justify-center">

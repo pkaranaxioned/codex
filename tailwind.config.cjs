@@ -43,6 +43,14 @@ module.exports = {
 				'slide-out-right': {
 					'from': { 'right': '0'},
 					'to': { 'right': '-100%'}
+				},
+				'theme-shutter-in': {
+					'from': {'opacity': '0','visibility': 'hidden','bottom': '0'},
+					'to': {'opacity': '1','visibility': 'visible','bottom': '55px'}
+				},
+				'theme-shutter-out': {
+					'from': {'opacity': '1','visibility': 'visible','bottom': '55px'},
+					'to': {'opacity': '0','visibility': 'hidden','bottom': '0'}
 				}
 			},
 			animation: {
@@ -50,6 +58,8 @@ module.exports = {
 				'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-in-right': 'slide-in-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-out-right': 'slide-out-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'theme-shutter-in': 'theme-shutter-in .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'theme-shutter-out': 'theme-shutter-out .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 			},
 			typography: {
 				DEFAULT: {

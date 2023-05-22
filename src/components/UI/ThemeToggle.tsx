@@ -41,22 +41,22 @@ export const ToggleTheme: React.FC = () => {
     }, [theme]);
 
     return (
-        <div className={`absolute top-6 right-[2.5%]`}>
-            <button onClick={toggleThemeDropdown} className="flex mr-1 items-center text-white font-bold">
+        <div className={`w-full fixed bottom-0 py-2 bg-black border-t-[1px] border-light-grey`}>
+            <button onClick={toggleThemeDropdown} className="flex mx-2 items-center text-white font-bold">
                 <span>{icon}</span>
                 <span className="text-[14px] ml-[3px]">Theme</span>
             </button>
             <ul
-                className={`${dropDownState ? 'block' : 'hidden'
-            } [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-light-grey w-36 bg-slate-800 overflow-hidden rounded text-left absolute z-10 top-[30px] right-[2.3%] list-none pl-0`}
+                className={`${dropDownState ? 'animate-theme-shutter-in' : 'animate-theme-shutter-out'
+            } [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-light-grey w-[90%] bg-slate-800 overflow-hidden rounded text-left absolute z-10 left-[15px] list-none pl-0`}
         
             >
-                <li
+               <li
                     className={`cursor-pointer m-0 p-1 hover:bg-slate-500 ${theme === 'light' ? 'bg-slate-500 text-white font-bold' : ''}`}
                     onClick={() => handleThemeSelection('light')}
                 >
                     <span>
-                        <Icons.lightTheme className={`${theme === 'light' ? 'text-pink font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
+                        <Icons.lightTheme className={`${theme === 'light' ? 'text-[#E41C79] font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
                     </span>
                     <span className="text-[15px]">Light</span>
                 </li>
@@ -65,7 +65,7 @@ export const ToggleTheme: React.FC = () => {
                     onClick={() => handleThemeSelection('dark')}
                 >
                     <span>
-                        <Icons.darkTheme className={`${theme === 'dark' ? 'text-pink font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
+                        <Icons.darkTheme className={`${theme === 'dark' ? 'text-[#E41C79] font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
                     </span>
                     <span className="text-[15px]">Dark</span>
                 </li>
@@ -74,9 +74,9 @@ export const ToggleTheme: React.FC = () => {
                     onClick={() => handleThemeSelection('system')}
                 >
                     <span>
-                        <Icons.system className={`${theme === 'system' ? 'text-pink font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
+                        <Icons.system className={`${theme === 'system' ? 'text-[#E41C79] font-bold' : 'text-white'} px-1 inline-block`} size={28} stroke={1} />
                     </span>
-                    <span className="text-[15px]">OS default</span>
+                    <span className="text-[15px]">System</span>
                 </li>
             </ul>
         </div>

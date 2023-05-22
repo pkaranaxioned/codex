@@ -2,6 +2,7 @@ import type React from 'react';
 import { useStore } from '@nanostores/react';
 import { isCategory }  from '../store/toggleState';
 import { Icons } from './icon';
+import { ToggleTheme } from './UI/ThemeToggle';
 
 
 export const Category: React.FC = (): JSX.Element => {
@@ -133,6 +134,7 @@ export const Category: React.FC = (): JSX.Element => {
           </ul>
         </div>
       </div>
+      <ToggleTheme />
     </aside>
   )
 }
