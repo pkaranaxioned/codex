@@ -15,7 +15,7 @@ export const Category: React.FC = (): JSX.Element => {
           <Icons.close color="white"  size={24} stroke={1} />
         </span>
       </div>
-      <div className='h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3'>
+      <div className='h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3 pb-[40px]'>
         <h2 className='text-sm mb-4 font-bold text-light-grey'>Snippets</h2>
         <ul className='border-solid rounded-xl border-ax-violet [&>:not(:last-child)]:mb-2 text-light-grey text-sm font-medium'>
           <li>

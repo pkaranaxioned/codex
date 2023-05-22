@@ -41,8 +41,8 @@ export const ToggleTheme: React.FC = () => {
     }, [theme]);
 
     return (
-        <div className={`w-full fixed bottom-0 py-2 bg-black border-t-[1px] border-light-grey`}>
-            <button onClick={toggleThemeDropdown} className="flex mx-2 items-center text-white font-bold">
+        <div className={`w-full fixed bottom-0 bg-black border-t-[1px] border-light-grey`}>
+            <button onClick={toggleThemeDropdown} className="flex w-full p-2 items-center text-white font-bold">
                 <span>{icon}</span>
                 <span className="text-[14px] ml-[3px]">Theme</span>
             </button>
