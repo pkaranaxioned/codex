@@ -8,6 +8,10 @@ module.exports = {
 			"poppins": ["Poppins"]
 		},
 		extend: {
+			boxShadow: {
+				'light': 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
+				'dark': 'rgba(255, 255, 255, 0.2) 0px 0px 6px'
+			  },
 			colors: {
 				'ax-violet': '#201547',
 				'dark-grey': '#0D0D0D',
@@ -18,6 +22,36 @@ module.exports = {
 				'light-red': '#fd828226',
 				'pink': '#E41C79',
 				'light-pink': 'rgba(228, 28, 121, 0.15)',
+				'hover-color':'#fff',
+				border: "hsl(var(--border))",
+				input: "hsl(var(--input))",
+				ring: "hsl(var(--ring))",
+				background: "hsl(var(--background))",
+				foreground: "hsl(var(--foreground))",
+				primary: {
+					DEFAULT: "hsl(var(--primary))",
+					foreground: "hsl(var(--primary-foreground))",
+				},
+				secondary: {
+					DEFAULT: "hsl(var(--secondary))",
+					foreground: "hsl(var(--secondary-foreground))",
+				},
+				destructive: {
+					DEFAULT: "hsl(var(--destructive))",
+					foreground: "hsl(var(--destructive-foreground))",
+				},
+				muted: {
+					DEFAULT: "hsl(var(--muted))",
+					foreground: "hsl(var(--muted-foreground))",
+				},
+				accent: {
+					DEFAULT: "hsl(var(--accent))",
+					foreground: "hsl(var(--accent-foreground))",
+				},
+				popover: {
+					DEFAULT: "hsl(var(--popover))",
+					foreground: "hsl(var(--popover-foreground))",
+				},
 			},
 			spacing: {
 				'60': '60vh',
@@ -37,20 +71,20 @@ module.exports = {
 					'to': { 'transform': 'translateX(-100%)' }
 				},
 				'slide-in-right': {
-					'from': { 'right': '-100%'},
-					'to': { 'right': '0'}
+					'from': { 'right': '-100%' },
+					'to': { 'right': '0' }
 				},
 				'slide-out-right': {
-					'from': { 'right': '0'},
-					'to': { 'right': '-100%'}
+					'from': { 'right': '0' },
+					'to': { 'right': '-100%' }
 				},
-				'theme-shutter-in': {
-					'from': {'opacity': '0','visibility': 'hidden','bottom': '0'},
-					'to': {'opacity': '1','visibility': 'visible','bottom': '55px'}
+				'theme-fade-in': {
+					'from': { 'opacity': '0', 'visibility': 'hidden', 'bottom': '0' },
+					'to': { 'opacity': '1', 'visibility': 'visible', 'bottom': '55px' }
 				},
-				'theme-shutter-out': {
-					'from': {'opacity': '1','visibility': 'visible','bottom': '55px'},
-					'to': {'opacity': '0','visibility': 'hidden','bottom': '0'}
+				'theme-fade-out': {
+					'from': { 'opacity': '1', 'visibility': 'visible', 'bottom': '55px' },
+					'to': { 'opacity': '0', 'visibility': 'hidden', 'bottom': '0' }
 				}
 			},
 			animation: {
@@ -58,19 +92,19 @@ module.exports = {
 				'slide-out-left': 'slide-out-left .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-in-right': 'slide-in-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 				'slide-out-right': 'slide-out-right .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-				'theme-shutter-in': 'theme-shutter-in .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
-				'theme-shutter-out': 'theme-shutter-out .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'theme-fade-in': 'theme-fade-in .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
+				'theme-fade-out': 'theme-fade-out .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards',
 			},
 			typography: {
 				DEFAULT: {
 					css: {
 						p: {
 							fontSize: '16px',
-							color: '#fff'
+							color: 'hsl(var(--foreground))'
 						},
 						li: {
 							fontSize: '16px',
-							color: '#fff'
+							color: 'hsl(var(--foreground))'
 						},
 						a: {
 							color: '#E41C79',
@@ -89,22 +123,23 @@ module.exports = {
 						},
 						th: {
 							padding: '12px',
-							border: '1px solid #fff',
+							border: '1px solid hsl(var(--border))',
 							lineHeight: '24px',
 							textAlign: 'center',
 							verticalAlign: 'middle',
-							background: '#201547'
+							background: 'hsl(var(--muted))',
+							color: 'hsl(var(--foreground))'
 						},
 						td: {
 							padding: '8px',
-							border: '1px solid #fff',
+							border: '1px solid hsl(var(--border))',
 							lineHeight: '24px',
-							color: '#fff'
+							color: 'hsl(var(--foreground))'
 						},
 						tr: {
 							padding: '8px',
-							border: '1px solid #fff',
-							lineHeight: '24px'
+							border: '1px solid "hsl(var(--border))',
+							lineHeight: '24px',
 						},
 					}
 				}
@@ -112,23 +147,23 @@ module.exports = {
 		},
 	},
 	plugins: [
-		plugin(function({ addUtilities }) {
+		plugin(function ({ addUtilities }) {
 			addUtilities({
 				/* Hide scrollbar for Chrome, Safari and Opera */
 				'.no-scrollbar::-webkit-scrollbar': {
 					'display': 'none',
 				},
-				
+
 				/* Hide scrollbar for IE, Edge and Firefox */
 				'.no-scrollbar': {
 					'-ms-overflow-style': 'none', /* IE and Edge */
 					'scrollbar-width': 'none',  /* Firefox */
 				},
-				
+
 				'.scrollbar::-webkit-scrollbar': {
 					'width': '12px'
 				},
-				
+
 				'.scrollbar::-webkit-scrollbar-track': {
 					'border-radius': '10px',
 					'background': 'rgba(0, 0, 0, 0)'
@@ -139,7 +174,7 @@ module.exports = {
 					'border': '5px solid rgba(0, 0, 0, 0)',
 					'background-clip': 'padding-box'
 				},
-				
+
 			})
 		}),
 		require('@tailwindcss/typography'),
