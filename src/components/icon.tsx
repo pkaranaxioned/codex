@@ -44,3 +44,4 @@ export const Icons = {
   darkTheme: IconMoon,
   system: IconDeviceLaptop
 }
+
