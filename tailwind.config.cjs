@@ -19,6 +19,7 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        theme:"var(--theme)",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -162,7 +163,7 @@ module.exports = {
           background: "rgba(0, 0, 0, 0)",
         },
         ".scrollbar::-webkit-scrollbar-thumb": {
-          background: "#E41C79",
+          background: "var(--secondary-hover)",
           "border-radius": "999999px",
           border: "5px solid rgba(0, 0, 0, 0)",
           "background-clip": "padding-box",
