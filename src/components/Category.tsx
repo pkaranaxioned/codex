@@ -24,18 +24,18 @@ export const Category: React.FC = (): JSX.Element => {
       </div>
       <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3 pb-[40px]">
         <h2 className="text-sm mb-4 font-bold text-muted-foreground">Snippets</h2>
-        <ul className="border-solid rounded-xl border-ax-violet [&>:not(:last-child)]:mb-2 text-muted-foreground text-sm font-medium">
+        <ul className="border-solid rounded-xl border-primary [&>:not(:last-child)]:mb-2 text-muted-foreground text-sm font-medium">
           <li>
             <a
               href="#FIXME"
               title="React"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.react className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.react className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 React
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 20
               </span>
             </a>
@@ -44,13 +44,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Google Suite"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center group md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.google className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.google className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Google Suite
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 5
               </span>
             </a>
@@ -59,26 +59,26 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="Gmail"
-                className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+                className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
               >
-                <Icons.gmail className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+                <Icons.gmail className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
                 <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                   Gmail
                 </span>
-                <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+                <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                   2
                 </span>
               </a>
               <a
                 href="#FIXME"
                 title="Google Photos"
-                className="active w-full items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+                className="active w-full items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
               >
-                <Icons.googlePhotos className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+                <Icons.googlePhotos className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
                 <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                   Google Photos
                 </span>
-                <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+                <span className="rounded-full ml-2 text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                   3
                 </span>
               </a>
@@ -88,13 +88,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Javascript"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.javascript className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.javascript className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Javascript
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 240
               </span>
             </a>
@@ -103,13 +103,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="HTML"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.html className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.html className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 HTML
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 100
               </span>
             </a>
@@ -118,13 +118,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="CSS"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.css className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.css className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 CSS
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 98
               </span>
             </a>
@@ -133,13 +133,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="PHP"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.php className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.php className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 PHP
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 36
               </span>
             </a>
@@ -148,13 +148,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="WordPress"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.wordpress className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.wordpress className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 WordPress
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 14
               </span>
             </a>
@@ -163,13 +163,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Node"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.npm className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.npm className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Node
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 55
               </span>
             </a>
@@ -178,13 +178,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Gatsby"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.gatsby className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.gatsby className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Gatsby
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 01
               </span>
             </a>
@@ -193,13 +193,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Docusaurus"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.docusaurus className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.docusaurus className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Docusaurus
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 35
               </span>
             </a>
@@ -208,13 +208,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="Figma"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.figma className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.figma className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Figma
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 64
               </span>
             </a>
@@ -223,13 +223,13 @@ export const Category: React.FC = (): JSX.Element => {
             <a
               href="#FIXME"
               title="SEO"
-              className="w-full basis-3 items-center md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color group transition-all flex p-3 rounded-xl relative"
+              className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.seo className="stroke-foreground group-hover:stroke-hover-color" size={24} stroke={1} />
+              <Icons.seo className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 SEO
               </span>
-              <span className="rounded-full ml-2	text-pink basis-3 bg-light-pink py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
+              <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
                 68
               </span>
             </a>
@@ -242,7 +242,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#react"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #react
               </a>
@@ -251,7 +251,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#redux"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #redux
               </a>
@@ -260,7 +260,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#google"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #google
               </a>
@@ -269,7 +269,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#js"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #js
               </a>
@@ -278,7 +278,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#css"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #css
               </a>
@@ -287,7 +287,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#responsive"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #responsive
               </a>
@@ -296,7 +296,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#react"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #react
               </a>
@@ -305,7 +305,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#redux"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #redux
               </a>
@@ -314,7 +314,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#google"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #google
               </a>
@@ -323,7 +323,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#js"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #js
               </a>
@@ -332,7 +332,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#css"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #css
               </a>
@@ -341,7 +341,7 @@ export const Category: React.FC = (): JSX.Element => {
               <a
                 href="#FIXME"
                 title="#responsive"
-                className="block md:hover:bg-ax-violet md:hover:font-bold md:hover:text-hover-color rounded-full text-muted-foreground text-sm bg-light-pink py-1 px-3 mb-2"
+                className="block md:hover:bg-secondary-hover md:hover:text-hover-color md:hover:font-bold rounded-full text-muted-foreground text-sm bg-secondary py-1 px-3 mb-2"
               >
                 #responsive
               </a>

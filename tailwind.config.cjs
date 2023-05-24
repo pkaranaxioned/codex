@@ -13,15 +13,6 @@ module.exports = {
         dark: "rgba(255, 255, 255, 0.2) 0px 0px 6px",
       },
       colors: {
-        "ax-violet": "#201547",
-        "dark-grey": "#0D0D0D",
-        "dark-grey-2": "#262525",
-        "light-grey": "#ffffff99",
-        "light-grey-2": "#ffffff1a",
-        red: "#ff6363",
-        "light-red": "#fd828226",
-        pink: "#E41C79",
-        "light-pink": "rgba(228, 28, 121, 0.15)",
         "hover-color": "#fff",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -31,10 +22,12 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "var(--primary-hover)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "var(--secondary-hover)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -107,7 +100,7 @@ module.exports = {
               color: "hsl(var(--foreground))",
             },
             a: {
-              color: "#E41C79",
+              color: "var(--secondary-hover)",
               "text-decoration-line": "none",
               "&:hover": {
                 "text-decoration-line": "underline",

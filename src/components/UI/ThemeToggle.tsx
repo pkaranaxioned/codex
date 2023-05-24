@@ -12,11 +12,11 @@ export const ToggleTheme: React.FC = () => {
   useEffect(() => {
     setIcon(
       theme === "dark" ? (
-        <Icons.darkTheme className="text-pink" size={24} stroke={1} />
+        <Icons.darkTheme className="text-secondary-hover" size={24} stroke={1} />
       ) : theme === "light" ? (
-        <Icons.lightTheme className="text-pink" size={24} stroke={1} />
+        <Icons.lightTheme className="text-secondary-hover" size={24} stroke={1} />
       ) : (
-        <Icons.system className="text-pink" size={24} stroke={1} />
+        <Icons.system className="text-secondary-hover" size={24} stroke={1} />
       )
     );
   }, [theme]);
@@ -65,7 +65,7 @@ export const ToggleTheme: React.FC = () => {
         >
           <span>
             <Icons.lightTheme
-              className={`${theme === "light" ? "text-pink font-bold" : "text-foreground"} px-1 inline-block`}
+              className={`${theme === "light" ? "text-secondary-hover font-bold" : "text-foreground"} px-1 inline-block`}
               size={28}
               stroke={1}
             />
@@ -80,7 +80,7 @@ export const ToggleTheme: React.FC = () => {
         >
           <span>
             <Icons.darkTheme
-              className={`${theme === "dark" ? "text-pink font-bold" : "text-foreground"} px-1 inline-block`}
+              className={`${theme === "dark" ? "text-secondary-hover font-bold" : "text-foreground"} px-1 inline-block`}
               size={28}
               stroke={1}
             />
@@ -95,7 +95,7 @@ export const ToggleTheme: React.FC = () => {
         >
           <span>
             <Icons.system
-              className={`${theme === "system" ? "text-pink font-bold" : "text-foreground"} px-1 inline-block`}
+              className={`${theme === "system" ? "text-secondary-hover font-bold" : "text-foreground"} px-1 inline-block`}
               size={28}
               stroke={1}
             />
