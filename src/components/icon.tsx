@@ -1,4 +1,4 @@
-import { 
+import {
   IconBrandReact,
   IconBrandDeno,
   IconBrandJavascript,
@@ -18,8 +18,8 @@ import {
   IconMenu2,
   IconSeo,
   IconX,
-  type Icon as TablerIcons
- } from '@tabler/icons-react';
+  type Icon as TablerIcons,
+} from "@tabler/icons-react";
 
 export type Icon = TablerIcons;
 
@@ -42,5 +42,5 @@ export const Icons = {
   close: IconX,
   lightTheme: IconSun,
   darkTheme: IconMoon,
-  system: IconDeviceLaptop
-}
+  system: IconDeviceLaptop,
+};
