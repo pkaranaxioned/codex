@@ -34,12 +34,12 @@ const { title } = Astro.props;
       const storedTheme = localStorage.getItem("theme");
       const body = document.querySelector("body");
       body.classList.add(
-        storedTheme === "system"
+		  storedTheme === "system" || !storedTheme
           ? window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light"
+		  ? "dark"
+		  : "light"
           : storedTheme
-      );
+		  );
     </script>
   </body>
 </html>
