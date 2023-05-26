@@ -6,7 +6,7 @@ export const ToggleTheme: React.FC = () => {
   const [icon, setIcon] = useState<JSX.Element | null>(
     <Icons.system className="text-foreground" size={24} stroke={1} />
   );
-  const [dropDownState, setDropDownState] = useState<boolean>(false);
+  const [dropDownState, setDropDownState] = useState<boolean | null >(null);
   const [initialized, setInitialized] = useState<boolean>(false);
 
   // Set icon based on theme
@@ -62,7 +62,7 @@ export const ToggleTheme: React.FC = () => {
           <span className="text-[14px] ml-[3px]">Theme</span>
         </button>
         <ul
-          className={`${dropDownState ? "animate-theme-fade-in" : "animate-theme-fade-out"
+          className={`${dropDownState === true && "animate-theme-fade-in"} ${dropDownState === false && "animate-theme-fade-out"}
             } ${theme === "system" || theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-muted-foreground w-[90%] bg-background text-foreground overflow-hidden rounded text-left absolute z-10 left-[15px] list-none pl-0`}
         >
           <li
@@ -96,11 +96,11 @@ export const ToggleTheme: React.FC = () => {
           <li
             className={`cursor-pointer m-0 p-1 hover:bg-theme ${theme === "system" ? "bg-foreground text-background font-bold" : ""
               }`}
-            onClick={() => handleThemeSelection("system")}
+            onClick={() => handleThemeSelection('system')}
           >
             <span>
               <Icons.system
-                className={`${theme === "system" ? "text-secondary-hover font-bold" : "text-foreground"} px-1 inline-block`}
+                className={`${theme === 'system' ? "text-secondary-hover font-bold" : "text-foreground"} px-1 inline-block`}
                 size={28}
                 stroke={1}
               />

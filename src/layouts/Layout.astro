@@ -1,10 +1,10 @@
 ---
-import { Category } from '../components/Category';
-import SnippetsContent from '../components/Content.astro';
-import { SnippetsListing } from '../components/SnippetsListing';
-import  "../../src/styles/global.css";
+import { Category } from "../components/Category";
+import SnippetsContent from "../components/Content.astro";
+import { SnippetsListing } from "../components/SnippetsListing";
+import "../../src/styles/global.css";
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -12,20 +12,34 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap" rel="stylesheet" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="font-poppins h-screen overflow-hidden">
-		<div class="flex overflow-hidden relative">
-			<Category client:load />
-			<SnippetsListing client:load />
-			<SnippetsContent />
-		</div>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-poppins h-screen overflow-hidden">
+    <div class="flex overflow-hidden relative">
+      <Category client:load />
+      <SnippetsListing client:load />
+      <SnippetsContent />
+    </div>
+    <slot />
+    <script defer>
+      const storedTheme = localStorage.getItem("theme");
+      const body = document.querySelector("body");
+      body.classList.add(
+        storedTheme === "system"
+          ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+          : storedTheme
+      );
+    </script>
+  </body>
 </html>
