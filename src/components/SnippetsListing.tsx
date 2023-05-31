@@ -16,7 +16,7 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
       <div
         className={`${
           $issnippet ? "animate-slide-in-right" : "animate-slide-out-right"
-        } overflow-hidden border-0 lg:border-r-[1px] border-border border-solid bg-background absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4  text-muted-foreground border-r-[1px] border-[#1d1f1e] lg:min-w-[300px] z-10`}
+        } overflow-hidden border-0 lg:border-r-[1px] border-border border-solid absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 border-r-[1px] border-[#1d1f1e] lg:min-w-[300px] z-10`}
       >
         <div className="block md:hidden"></div>
         <div className="flex  flex-col py-5">
