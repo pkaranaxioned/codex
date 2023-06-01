@@ -47,14 +47,14 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
             </div>
           </form>
         </div>
-        <ul className="mx-[auto] mt-4 h-[calc(100vh_-_100px)] overflow-y-auto scrollbar border-b-1 border-border border-solid">
-          <li className="border-b-[1px] border-border py-3 cursor-pointer transition-all duration-[0.3s] group md:hover:bg-foreground px-6">
+        <ul className="mx-[auto] mt-4 h-[calc(100vh_-_100px)] overflow-y-auto scrollbar">
+          <li className="border-b-[1px] border-border border-solid py-3 cursor-pointer transition-property duration-[0.3s] group md:hover:bg-foreground px-6">
             <button className="text-foreground md:group-hover:text-background font-semibold text-lg mb-3">Clip</button>
             <p className="line-clamp text-muted-foreground text-sm">
               Clips that you save using the Google Clips app will appear in Google Photos or your phone's gallery.
             </p>
           </li>
-          <li className="border-b-[1px] border-border cursor-pointer text-foreground py-3 group transition-all duration-[0.3s] md:hover:bg-foreground px-6">
+          <li className="border-b-[1px] border-border border-solid cursor-pointer text-foreground py-3 group transition-property duration-[0.3s] md:hover:bg-foreground px-6">
             <button className="font-semibold text-lg mb-3 flex md:group-hover:text-background">Sign In</button>
             <p className="line-clamp text-muted-foreground text-sm transition-all duration-[0.3s]">
               Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign
@@ -108,7 +108,7 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
               </li>
             </ul>
           </li>
-          <li className="border-b-[1px] border-border py-3 cursor-pointer transition-all group duration-[0.3s] md:hover:bg-foreground px-6">
+          <li className="border-b-[1px] border-border border-solid py-3 cursor-pointer transition-property group duration-[0.3s] md:hover:bg-foreground px-6">
             <button className="text-foreground font-semibold text-lg mb-3 md:group-hover:text-background">
               Access{" "}
             </button>
