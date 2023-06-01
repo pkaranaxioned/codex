@@ -57,8 +57,8 @@ export const ToggleTheme: React.FC = () => {
 
   return (
       <div className="w-full bg-background fixed bottom-0 border-t-[1px] border-border">
-        <button onClick={toggleThemeDropdown} className="flex w-full p-2 items-center text-foreground font-bold">
-          <span>{icon}</span>
+        <button onClick={toggleThemeDropdown} className={`flex w-full p-2 items-center text-foreground font-bold`}>
+          <span className={`${initialized ? 'visible' : 'invisible'}`}>{icon}</span>
           <span className="text-[14px] ml-[3px]">Theme</span>
         </button>
         <ul
