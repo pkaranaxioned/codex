@@ -22,7 +22,7 @@ export const Category: React.FC = (): JSX.Element => {
           <Icons.close className="stroke-foreground" size={24} stroke={1} />
         </span>
       </div>
-      <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3 pb-[40px]">
+      <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3">
         <h2 className="text-sm mb-4 font-bold text-muted-foreground">Snippets</h2>
         <ul className="border-solid rounded-xl border-primary [&>:not(:last-child)]:mb-2 text-muted-foreground text-sm font-medium">
           <li>

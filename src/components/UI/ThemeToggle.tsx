@@ -61,10 +61,6 @@ export const ToggleTheme: React.FC = () => {
           <span className={`${initialized ? 'visible' : 'invisible'}`}>{icon}</span>
           <span className="text-[14px] ml-[3px]">Theme</span>
         </button>
-        {/* <ul
-          className={`${dropDownState && "animate-theme-fade-in"} ${(dropDownState === false || dropDownState === null) && "animate-theme-fade-out"}
-            } ${theme === "system" || theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-primary-hover w-[90%] bg-background text-foreground overflow-hidden rounded text-left absolute z-10 left-[15px] list-none pl-0`}
-        > */}
          <ul
           className={`${dropDownState ? 'animate-theme-fade-in' : dropDownState === null ? 'invisible' : 'animate-theme-fade-out'} ${theme === "system" || theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-primary-hover w-[90%] bg-background text-foreground rounded text-left absolute z-10 left-[15px] list-none pl-0`}
         >
