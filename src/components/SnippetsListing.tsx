@@ -5,7 +5,7 @@ import { Icons } from "./icon";
 
 export const SnippetsListing: React.FC = (): JSX.Element => {
   const $isCategory = useStore(isCategory);
-  const $issnippet = useStore(isSnippets);
+  const $isSnippet = useStore(isSnippets);
 
   const changeListingState = () => {
     isCategory.set(!$isCategory);
@@ -14,9 +14,8 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
   return (
     <>
       <div
-        className={`${
-          $issnippet ? "animate-slide-in-right" : "animate-slide-out-right"
-        } border-0 lg:border-r-[1px] border-border border-solid absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 border-r-[1px] lg:min-w-[300px] z-10 bg-background lg:bg-inherit`}
+        className={`md:visible ${$isSnippet === null ? 'invisible' : $isSnippet ? "animate-slide-in-right" : "animate-slide-out-right"
+          } border-0 lg:border-r-[1px] border-border border-solid absolute w-11/12 sm:w-1/2 md:w-auto md:static lg:animate-none top-0 right-0 md:top-[unset] md:right-[unset] basis-2/6 xl:basis-1/5 lg:basis-1/4 border-r-[1px] lg:min-w-[300px] z-10 bg-background lg:bg-inherit`}
       >
         <div className="block md:hidden"></div>
         <div className="flex flex-col py-5">
