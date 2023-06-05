@@ -56,17 +56,16 @@ export const ToggleTheme: React.FC = () => {
   }, [theme, initialized]);
 
   return (
-      <div className="w-full bg-background fixed bottom-0 border-t-[1px] border-border">
+      <div className="w-full bg-background border-t-[1px] border-border">
         <button onClick={toggleThemeDropdown} className={`flex w-full p-2 items-center text-foreground font-bold`}>
           <span className={`${initialized ? 'visible' : 'invisible'}`}>{icon}</span>
           <span className="text-[14px] ml-[3px]">Theme</span>
         </button>
-        <ul
-          className={`${dropDownState === true && "animate-theme-fade-in"} ${dropDownState === false && "animate-theme-fade-out"}
-            } ${theme === "system" || theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-muted-foreground w-[90%] bg-background text-foreground overflow-hidden rounded text-left absolute z-10 left-[15px] list-none pl-0`}
+         <ul
+          className={`${dropDownState ? 'animate-theme-fade-in' : dropDownState === null ? 'invisible' : 'animate-theme-fade-out'} ${theme === "system" ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "shadow-dark" : "shadow-light" : theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-primary-hover w-[90%] bg-background text-foreground rounded text-left absolute z-10 left-[15px] list-none pl-0`}
         >
           <li
-            className={`cursor-pointer m-0 p-1 hover:bg-theme ${theme === "light" ? "bg-foreground text-background font-bold" : ""
+            className={`cursor-pointer m-0 p-1 hover:bg-accent ${theme === "light" ? "bg-accent text-foreground font-bold" : ""
               }`}
             onClick={() => handleThemeSelection("light")}
           >
@@ -80,7 +79,7 @@ export const ToggleTheme: React.FC = () => {
             <span className="text-[15px]">Light</span>
           </li>
           <li
-            className={`cursor-pointer m-0 p-1 hover:bg-theme ${theme === "dark" ? "bg-foreground text-background font-bold" : ""
+            className={`cursor-pointer m-0 p-1 hover:bg-accent ${theme === "dark" ? "bg-accent text-foreground font-bold" : ""
               }`}
             onClick={() => handleThemeSelection("dark")}
           >
@@ -94,7 +93,7 @@ export const ToggleTheme: React.FC = () => {
             <span className="text-[15px]">Dark</span>
           </li>
           <li
-            className={`cursor-pointer m-0 p-1 hover:bg-theme ${theme === "system" ? "bg-foreground text-background font-bold" : ""
+            className={`cursor-pointer m-0 p-1 hover:bg-accent ${theme === "system" ? "bg-accent text-foreground font-bold" : ""
               }`}
             onClick={() => handleThemeSelection('system')}
           >

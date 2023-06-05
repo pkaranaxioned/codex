@@ -10,7 +10,7 @@ export const Category: React.FC = (): JSX.Element => {
     <aside
       className={`${
         $isCategory ? "animate-slide-in-left" : "animate-slide-out-left"
-      } z-[12] category overflow-hidden border-0 lg:border-r-[1px] border-border border-solid lg:animate-none py-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative xl:basis-1/5 lg:basis-1/4 block h-screen lg:min-w-[300px] bg-background lg:bg-inherit`}
+      } z-[12] border-0 lg:border-r-[1px] border-border border-solid lg:animate-none pt-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative xl:basis-1/5 lg:basis-1/4 flex h-screen lg:min-w-[300px] bg-background lg:bg-inherit flex-col`}
     >
       <div className="py-4 flex items-center justify-between lg:justify-center">
         <h1 className="text-4xl text-foreground font-bold ml-[3%]">Codex</h1>
@@ -22,7 +22,7 @@ export const Category: React.FC = (): JSX.Element => {
           <Icons.close className="stroke-foreground" size={24} stroke={1} />
         </span>
       </div>
-      <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3 pb-[40px]">
+      <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3">
         <h2 className="text-sm mb-4 font-bold text-muted-foreground">Snippets</h2>
         <ul className="border-solid rounded-xl border-primary [&>:not(:last-child)]:mb-2 text-muted-foreground text-sm font-medium">
           <li>
@@ -31,7 +31,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="React"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.react className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.react className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 React
               </span>
@@ -46,7 +46,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Google Suite"
               className="w-full basis-3 items-center group md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.google className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.google className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Google Suite
               </span>
@@ -61,7 +61,7 @@ export const Category: React.FC = (): JSX.Element => {
                 title="Gmail"
                 className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
               >
-                <Icons.gmail className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+                <Icons.gmail className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
                 <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                   Gmail
                 </span>
@@ -74,7 +74,7 @@ export const Category: React.FC = (): JSX.Element => {
                 title="Google Photos"
                 className="active w-full items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
               >
-                <Icons.googlePhotos className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+                <Icons.googlePhotos className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
                 <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                   Google Photos
                 </span>
@@ -90,7 +90,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Javascript"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.javascript className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.javascript className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Javascript
               </span>
@@ -105,7 +105,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="HTML"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.html className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.html className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 HTML
               </span>
@@ -120,7 +120,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="CSS"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.css className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.css className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 CSS
               </span>
@@ -135,7 +135,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="PHP"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.php className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.php className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 PHP
               </span>
@@ -150,7 +150,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="WordPress"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.wordpress className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.wordpress className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 WordPress
               </span>
@@ -165,7 +165,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Node"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.npm className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.npm className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Node
               </span>
@@ -180,7 +180,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Gatsby"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.gatsby className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.gatsby className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Gatsby
               </span>
@@ -195,7 +195,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Docusaurus"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.docusaurus className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.docusaurus className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Docusaurus
               </span>
@@ -210,7 +210,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="Figma"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.figma className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.figma className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 Figma
               </span>
@@ -225,7 +225,7 @@ export const Category: React.FC = (): JSX.Element => {
               title="SEO"
               className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
             >
-              <Icons.seo className="stroke-foreground group-hover:stroke-background" size={24} stroke={1} />
+              <Icons.seo className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
               <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
                 SEO
               </span>

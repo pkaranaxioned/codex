@@ -12,6 +12,9 @@ module.exports = {
         light: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         dark: "rgba(255, 255, 255, 0.2) 0px 0px 6px",
       },
+      transitionProperty: {
+       'property': 'color, background',
+      },
       colors: {
         "hover-color": "#fff",
         border: "hsl(var(--border))",
