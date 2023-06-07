@@ -53,7 +53,7 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
               Clips that you save using the Google Clips app will appear in Google Photos or your phone's gallery.
             </p>
           </li>
-          <li className="border-b-[1px] border-border border-solid cursor-pointer text-foreground py-3 group transition-property duration-[0.3s] md:hover:bg-foreground px-6">
+          <li className="border-b-[1px] border-border border-solid cursor-pointer py-3 group transition-property duration-[0.3s] md:hover:bg-foreground px-6 active">
             <button className="font-semibold text-lg mb-3 flex md:group-hover:text-background">Sign In</button>
             <p className="line-clamp text-muted-foreground text-sm transition-all duration-[0.3s]">
               Go to Google Photos. If you aren't signed in to your Google Account, click Go to Google Photos and sign

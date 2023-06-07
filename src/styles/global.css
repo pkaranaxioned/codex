@@ -92,7 +92,7 @@
 }
 
 @layer components {
-  .category .active {
+  .active {
     @apply bg-primary text-background font-bold;
   }
 
