@@ -21,7 +21,7 @@ export const SnippetsListing: React.FC = (): JSX.Element => {
         <div className="flex flex-col py-5">
           <div className="flex flex-col items-start lg:flex-row w-4/5 m-auto justify-between lg:justify-center">
             <button className="mr-2 w-10 h-10 lg:hidden block" onClick={() => changeListingState()}>
-              <img src="assets/Codex-logo.svg" alt="Codex" className="bg-secondary-hover" />
+              <img src="/assets/Codex-logo.svg" alt="Codex" className="bg-secondary-hover" />
             </button>
             <h2 className="flex justify-center py-4 text-foreground">
               <Icons.googlePhotos className="stroke-foreground" size={24} stroke={1} />
