@@ -5,8 +5,8 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 // 1. Generate a new path for every collection post
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("snippets");
-  return blogEntries.map((post) => ({
+  const snippetEnteries = await getCollection("snippets");
+  return snippetEnteries.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
@@ -17,14 +17,27 @@ interface Props {
 }
 const { post } = Astro.props;
 const { Content } = await post.render();
-console.log(Content);
+const tags = post.data.tags;
 ---
 
 <Layout title="Codex Snippets">
-  <div class='scrollbar relative md:basis-3/5 xl:basis-1/2 basis-full flex-1 p-4 h-screen overflow-y-auto markdown-data prose prose-stone dark:prose-invert prose-lg max-w-none prose-th:px-2 prose-td:px-2'>
+  <div
+    class="scrollbar relative md:basis-3/5 xl:basis-1/2 basis-full flex-1 p-4 h-screen overflow-y-auto markdown-data prose prose-stone dark:prose-invert prose-lg max-w-none prose-th:px-2 prose-td:px-2"
+  >
     <Hamburger client:load />
-    <h2>{post.data.title}</h2>
-    <p>{post.data.description}</p>
+    <h2 class="capitalize">{post.data.title}</h2>
+    <p class="m-0">{post.data.description}</p>
+    <ul class="m-0 p-0 list-none flex flex-wrap">
+      {
+        post.data.tags.map((tag: string, index: number) => (
+          <li class="pr-1" key={index}>
+            <a href="#FIXME" title={tag} class="block decoration-transparent md:hover:bg-secondary-hover md:hover:font-bold md:hover:text-hover-color rounded-full  text-muted-foreground text-sm bg-secondary py-1 px-3">
+              #{tag}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
     <Content />
   </div>
 </Layout>

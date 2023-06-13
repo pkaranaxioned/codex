@@ -4,16 +4,11 @@ import { isCategory } from "../store/toggleState";
 import { Icons } from "./icon";
 import { ToggleTheme } from "./UI/ThemeToggle";
 
-import { getCollection, CollectionEntry } from "astro:content";
-const posts: CollectionEntry<"snippets">[] = await getCollection("snippets");
-
 export const Category: React.FC = (): JSX.Element => {
   const $isCategory = useStore(isCategory);
   return (
     <aside
-      className={`lg:visible ${
-        $isCategory === null ? "invisible" : $isCategory ? "animate-slide-in-left" : "animate-slide-out-left"
-      } z-[12] border-0 lg:border-r-[1px] border-border border-solid lg:animate-none pt-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative xl:basis-1/5 lg:basis-1/4 flex h-screen lg:min-w-[300px] bg-background lg:bg-inherit flex-col category`}
+      className={`lg:visible ${$isCategory === null ? "invisible" : $isCategory ? "animate-slide-in-left" : "animate-slide-out-left"} z-[12] border-0 lg:border-r-[1px] border-border border-solid lg:animate-none pt-4 w-11/12 sm:w-1/2 md:w-2/6 lg:w-auto top-0 left-0 -translate-x-full lg:translate-x-0 ease-in-out absolute lg:relative xl:basis-1/5 lg:basis-1/4 flex h-screen lg:min-w-[300px] bg-background lg:bg-inherit flex-col category`}
     >
       <div className="py-4 flex items-center justify-between lg:justify-center">
         <h1 className="text-4xl text-foreground font-bold ml-[3%]">Codex</h1>
@@ -28,25 +23,7 @@ export const Category: React.FC = (): JSX.Element => {
       <div className="h-[calc(100vh_-_80px)] overflow-y-auto scrollbar px-3">
         <h2 className="text-sm mb-4 font-bold text-muted-foreground">Snippets</h2>
         <ul className="border-solid rounded-xl border-primary [&>:not(:last-child)]:mb-2 text-muted-foreground text-sm font-medium">
-          {posts.map((post) => (
-            <li key={post.slug}>
-              <a
-                href={`/snippets/${post.slug}`}
-                title={post.data.title}
-                className="w-full basis-3 items-center md:hover:bg-primary md:hover:font-bold md:hover:text-background group transition-all flex p-3 rounded-xl relative"
-              >
-                <Icons.react className="stroke-foreground md:group-hover:stroke-background" size={24} stroke={1} />
-                <span className="ml-2 text-ellipsis overflow-hidden basis-[70%] whitespace-nowrap block text-left">
-                  {post.data.category}
-                </span>
-                <span className="rounded-full ml-2 md:group-hover:bg-secondary-hover  md:group-hover:text-hover-color text-secondary-hover basis-3 bg-primary-hover py-0.5 px-2 absolute top-1/2 right-3 -translate-y-1/2 text-xs">
-                  20
-                </span>
-              </a>
-            </li>
-          ))}
-
-          {/* <li>
+          <li>
             <a
               href="#FIXME"
               title="React"
@@ -254,7 +231,7 @@ export const Category: React.FC = (): JSX.Element => {
                 68
               </span>
             </a>
-          </li> */}
+          </li>
         </ul>
         <div className="mt-3">
           <h2 className="text-sm font-bold text-muted-foreground">Tags</h2>
