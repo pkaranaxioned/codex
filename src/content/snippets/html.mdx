@@ -1,16 +1,9 @@
 ---
-id: html-checklist
-title: HTML Code Review Checklist
-description: 'This is the first post of my new Astro blog.'
-author: 'Karan Patel'
-image:
-    url: 'https://images.unsplash.com/photo-1679473379899-20654f983d1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80' 
-    alt: 'The Astro logo with the word One.'
+title: HTML
+description: 'This is a content for HTML'
 tags: [HTML, HTML checklist]
-category: gooogle-suit
-subCategory: google-photos
+category: HTML
 ---
-
 ## Overview
 
 The purpose of the WordPress Coding Standards is to create a baseline for collaboration and review within various aspects of the WordPress open source project and community, from core code to themes to plugins.

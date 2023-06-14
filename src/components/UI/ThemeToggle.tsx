@@ -62,7 +62,7 @@ export const ToggleTheme: React.FC = () => {
           <span className="text-[14px] ml-[3px]">Theme</span>
         </button>
          <ul
-          className={`${dropDownState ? 'animate-theme-fade-in' : dropDownState === null ? 'invisible' : 'animate-theme-fade-out'} ${theme === "system" ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "shadow-dark" : "shadow-light" : theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-primary-hover w-[90%] bg-background text-foreground rounded text-left absolute z-10 left-[15px] list-none pl-0`}
+          className={`${dropDownState ? 'animate-theme-fade-in' : dropDownState === null ? 'invisible' : 'animate-theme-fade-out'} ${theme === "system" ? window.matchMedia("(prefers-color-scheme: dark)").matches ? "shadow-dark" : "shadow-light" : theme === "light" ? "shadow-light" : theme === "dark" ? "shadow-dark" : ""} [&>:not(:last-child)]:border-b-[1px] [&>:not(:last-child)]:border-primary-hover w-[90%] bg-background text-foreground rounded text-left absolute z-10 left-[15px] list-none pl-0 active`}
         >
           <li
             className={`cursor-pointer m-0 p-1 hover:bg-accent ${theme === "light" ? "bg-accent text-foreground font-bold" : ""
