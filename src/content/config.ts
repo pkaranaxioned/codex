@@ -8,7 +8,6 @@ export const collection = {
     title: z.string(),
     description: z.string(),
     category: z.string(),
-    subCategory: z.string(),
     tags: z.array(z.string()),
   }),
 }),
